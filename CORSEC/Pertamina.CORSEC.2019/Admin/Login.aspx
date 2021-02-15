@@ -1,31 +1,19 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Pertamina.CORSEC._2019.Admin.Login" %>
 
-<%--<link href="<%: ResolveUrl("~/Content/admin/script/bootstrap.min.css") %>" rel="stylesheet" id="bootstrap-css">
-<script src="<%: ResolveUrl("~/Content/admin/script/bootstrap.min.js") %>"></script>
-<script src="<%: ResolveUrl("~/Content/admin/script/jquery.min.js") %>"></script>--%>
-<!------ Include the above in your HEAD tag ---------->
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login Page</title>
-    <!--Made with love by Mutiullah Samim -->
+    <title>Login Page</title>   
     <script src="https://kit.fontawesome.com/fd3d3f9361.js" crossorigin="anonymous"></script>
-
-    <!--Bootsrap 4 CDN-->
     <link rel="stylesheet" href="<%: ResolveUrl("~/Content/admin/css/bootstrap.min.css") %>">
-
-    <!--Fontawesome CDN-->
     <link rel="stylesheet" href="<%: ResolveUrl("~/Content/admin/css/all.css") %>">
-
-    <!--Custom styles-->
     <style type="text/css">
         /* Made with love by Mutiullah Samim*/
 
         @import url('https://fonts.googleapis.com/css?family=Numans');
 
         html, body {
-            /*background-image: url('<%: ResolveUrl("~/Content/admin/images/544750.jpg") %>');*/
             background-image: url('<%: ResolveUrl("~/Content/assets/media/bg/bg-9.jpg") %>');
             background-size: cover;
             background-repeat: no-repeat;
@@ -93,8 +81,7 @@
 
         .login_btn {
             color: black;
-            background-color: cornflowerblue;
-            /*background-color: #FFC312;*/
+            background-color: cornflowerblue;           
             width: 100px;
         }
 
@@ -119,9 +106,6 @@
                 <div class="card-header">
                     <h4>Login to admin page</h4>
                     <div class="d-flex justify-content-end social_icon">
-                        <%--<span><i class="fab fa-facebook-square"></i></span>
-                        <span><i class="fab fa-google-plus-square"></i></span>
-                        <span><i class="fab fa-twitter-square"></i></span>--%>
                         <img alt="Logo" src="/CORSEC/Content/assets/media/logos/logo-dark.png" height="40">
                     </div>
                 </div>
@@ -131,7 +115,6 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <%--<input type="text" class="form-control" placeholder="username">--%>
                             <asp:TextBox ID="txtUsername" runat="server" class="form-control" placeholder="Username" required="" autofocus=""></asp:TextBox>
 
                         </div>
@@ -139,11 +122,9 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <%--<input type="password" class="form-control" placeholder="password">--%>
                             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" class="form-control" placeholder="Password" required=""></asp:TextBox>
                         </div>
                         <div class="row align-items-center remember">
-                            <%--  <input type="checkbox">Remember Me--%>
                             <asp:CheckBox ID="remember" runat="server" TextAlign="Right" Text="Remember me" />
                         </div>
                         <div class="form-group">
@@ -151,15 +132,7 @@
                             <asp:Button ID="btnLogin" runat="server" Text="Login" class="btn float-right login_btn" OnClick="btnLogin_Click" />
                         </div>
                     </form>
-                </div>
-                <%--<div class="card-footer">
-                    <div class="d-flex justify-content-center links">
-                        Don't have an account?<a href="#">Sign Up</a>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <a href="#">Forgot your password?</a>
-                    </div>
-                </div>--%>
+                </div>             
             </div>
         </div>
     </div>
