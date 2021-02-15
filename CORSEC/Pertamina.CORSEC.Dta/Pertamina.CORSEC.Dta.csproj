@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDA8B49E-FD18-417E-9969-D141D574F6A8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pertamina.CORSEC.Dta</RootNamespace>
+    <AssemblyName>Pertamina.CORSEC.Dta</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DBHelper, Version=1.0.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Pertamina.CORSEC.Dependencies\DBHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Pertamina.CORSEC.Dependencies\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cstm\tbl_Board_Speech_PresentationItem.cs" />
+    <Compile Include="Cstm\tbl_Board_Speech_Presentation_FileItem.cs" />
+    <Compile Include="Cstm\tbl_brand_ExhibitionItem.cs" />
+    <Compile Include="Cstm\tbl_brand_Exhibition_FileItem.cs" />
+    <Compile Include="Cstm\tbl_brand_guidelineItem.cs" />
+    <Compile Include="Cstm\tbl_brand_guideline_aplikasi_inspirasi_detailItem.cs" />
+    <Compile Include="Cstm\tbl_brand_SponsorshipItem.cs" />
+    <Compile Include="Cstm\tbl_brand_Sponsorship_FileItem.cs" />
+    <Compile Include="Cstm\tbl_Collateral_Corporate_DetailItem.cs" />
+    <Compile Include="Cstm\tbl_Collateral_Corporate_ItemItem.cs" />
+    <Compile Include="Cstm\tbl_combo_detailItem.cs" />
+    <Compile Include="Cstm\tbl_CorporateCommunication_KrisisItem.cs" />
+    <Compile Include="Cstm\tbl_CorporateCommunication_Sub_CategoryItem.cs" />
+    <Compile Include="Cstm\tbl_CSR_SMEP_ProgramItem.cs" />
+    <Compile Include="Cstm\tbl_Design_GrafisItem.cs" />
+    <Compile Include="Cstm\tbl_Design_Grafis_FileItem.cs" />
+    <Compile Include="Cstm\tbl_Design_Grafis_VideoItem.cs" />
+    <Compile Include="Cstm\tbl_fileItem.cs" />
+    <Compile Include="Cstm\tbl_File_ProgramItem.cs" />
+    <Compile Include="Cstm\tbl_File_TemplateItem.cs" />
+    <Compile Include="Cstm\tbl_Footer_DetailItem.cs" />
+    <Compile Include="Cstm\tbl_Guidelines_DocItem.cs" />
+    <Compile Include="Cstm\tbl_Guidelines_FileItem.cs" />
+    <Compile Include="Cstm\tbl_Kinerja_SekperItem.cs" />
+    <Compile Include="Cstm\tbl_Kinerja_Sekper_FileItem.cs" />
+    <Compile Include="Cstm\tbl_logItem.cs" />
+    <Compile Include="Cstm\tbl_MediaItem.cs" />
+    <Compile Include="Cstm\tbl_Media_FileItem.cs" />
+    <Compile Include="Cstm\tbl_Media_VideoItem.cs" />
+    <Compile Include="Cstm\tbl_menuItem.cs" />
+    <Compile Include="Cstm\tbl_productItem.cs" />
+    <Compile Include="Cstm\tbl_product_FileItem.cs" />
+    <Compile Include="Cstm\tbl_product_relatedItem.cs" />
+    <Compile Include="Cstm\tbl_Profile_Strategic_PartnerItem.cs" />
+    <Compile Include="Cstm\tbl_Profile_TemplateItem.cs" />
+    <Compile Include="Cstm\tbl_ProgramItem.cs" />
+    <Compile Include="Cstm\tbl_RoleItem.cs" />
+    <Compile Include="Cstm\tbl_Stake_Holder_Management_Diplomatic_IntelegenceItem.cs" />
+    <Compile Include="Cstm\tbl_Stake_Holder_Management_Stake_Holder_DatabaseItem.cs" />
+    <Compile Include="Cstm\tbl_Struktur_Organisasi_AnggotaItem.cs" />
+    <Compile Include="Cstm\tbl_Struktur_Organisasi_Diagram_CorcomItem.cs" />
+    <Compile Include="Cstm\tbl_Struktur_Organisasi_Diagram_CorsecItem.cs" />
+    <Compile Include="Cstm\tbl_userItem.cs" />
+    <Compile Include="Cstm\tbl_Profile_Visi_MisiItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tbl_Berita_ArtikelItem.cs" />
+    <Compile Include="tbl_Board_Speech_PresentationItem.cs" />
+    <Compile Include="tbl_Board_Speech_Presentation_FileItem.cs" />
+    <Compile Include="tbl_Board_Speech_Presentation_InfoItem.cs" />
+    <Compile Include="tbl_brand_Communication_Campaign_logoItem.cs" />
+    <Compile Include="tbl_brand_Communication_Campaign_user_manualItem.cs" />
+    <Compile Include="tbl_brand_equityItem.cs" />
+    <Compile Include="tbl_brand_ExhibitionItem.cs" />
+    <Compile Include="tbl_brand_Exhibition_FileItem.cs" />
+    <Compile Include="tbl_brand_guidelineItem.cs" />
+    <Compile Include="tbl_brand_guideline_aplikasi_inspirasiItem.cs" />
+    <Compile Include="tbl_brand_guideline_aplikasi_inspirasi_detailItem.cs" />
+    <Compile Include="tbl_brand_guideline_logoItem.cs" />
+    <Compile Include="tbl_brand_guideline_user_manualItem.cs" />
+    <Compile Include="tbl_brand_SponsorshipItem.cs" />
+    <Compile Include="tbl_brand_Sponsorship_FileItem.cs" />
+    <Compile Include="tbl_bulanItem.cs" />
+    <Compile Include="tbl_Collateral_CorporateItem.cs" />
+    <Compile Include="tbl_Collateral_Corporate_DetailItem.cs" />
+    <Compile Include="tbl_Collateral_Corporate_ItemItem.cs" />
+    <Compile Include="tbl_combo_detailItem.cs" />
+    <Compile Include="tbl_CorporateCommunication_CategoryItem.cs" />
+    <Compile Include="tbl_CorporateCommunication_CorporateItem.cs" />
+    <Compile Include="tbl_CorporateCommunication_KrisisItem.cs" />
+    <Compile Include="tbl_CorporateCommunication_Sub_CategoryItem.cs" />
+    <Compile Include="tbl_CSR_SMEP_ProgramItem.cs" />
+    <Compile Include="tbl_CSR_SMEP_Program_CategoryItem.cs" />
+    <Compile Include="tbl_CSR_SMEP_Program_CateoryItem.cs" />
+    <Compile Include="tbl_CSR_SMEP_Program_Related_DocumentItem.cs" />
+    <Compile Include="tbl_Design_GrafisItem.cs" />
+    <Compile Include="tbl_Design_Grafis_FileItem.cs" />
+    <Compile Include="tbl_Design_Grafis_VideoItem.cs" />
+    <Compile Include="tbl_email_templateItem.cs" />
+    <Compile Include="tbl_EventItem.cs" />
+    <Compile Include="tbl_Featured_ArticleItem.cs" />
+    <Compile Include="tbl_fileItem.cs" />
+    <Compile Include="tbl_File_ProgramItem.cs" />
+    <Compile Include="tbl_file_templateItem.cs" />
+    <Compile Include="tbl_FooterItem.cs" />
+    <Compile Include="tbl_Footer_DetailItem.cs" />
+    <Compile Include="tbl_Guidelines_DocItem.cs" />
+    <Compile Include="tbl_Guidelines_FileItem.cs" />
+    <Compile Include="tbl_Guidelines_InfoItem.cs" />
+    <Compile Include="tbl_InfoItem.cs" />
+    <Compile Include="tbl_Kinerja_SekperItem.cs" />
+    <Compile Include="tbl_Kinerja_Sekper_FileItem.cs" />
+    <Compile Include="tbl_Kinerja_Sekper_InfoItem.cs" />
+    <Compile Include="tbl_logItem.cs" />
+    <Compile Include="tbl_MediaItem.cs" />
+    <Compile Include="tbl_Media_fileItem.cs" />
+    <Compile Include="tbl_Media_VideoItem.cs" />
+    <Compile Include="tbl_menuItem.cs" />
+    <Compile Include="tbl_privilegeItem.cs" />
+    <Compile Include="tbl_productItem.cs" />
+    <Compile Include="tbl_product_contact_personItem.cs" />
+    <Compile Include="tbl_product_FileItem.cs" />
+    <Compile Include="tbl_product_relatedItem.cs" />
+    <Compile Include="tbl_product_wishlistItem.cs" />
+    <Compile Include="tbl_Profile_Strategic_PartnerItem.cs" />
+    <Compile Include="tbl_Profile_TemplateItem.cs" />
+    <Compile Include="tbl_Profile_Visi_MisiItem.cs" />
+    <Compile Include="tbl_ProgramItem.cs" />
+    <Compile Include="tbl_roleItem.cs" />
+    <Compile Include="tbl_sessionItem.cs" />
+    <Compile Include="tbl_settingItem.cs" />
+    <Compile Include="tbl_Stake_Holder_Management_CountryItem.cs" />
+    <Compile Include="tbl_Stake_Holder_Management_Diplomatic_IntelegenceItem.cs" />
+    <Compile Include="tbl_Stake_Holder_Management_Stake_Holder_DatabaseItem.cs" />
+    <Compile Include="tbl_Struktur_OrganisasiItem.cs" />
+    <Compile Include="tbl_Struktur_Organisasi_AnggotaItem.cs" />
+    <Compile Include="tbl_Struktur_Organisasi_Diagram_CorcomItem.cs" />
+    <Compile Include="tbl_Struktur_Organisasi_Diagram_CorsecItem.cs" />
+    <Compile Include="tbl_Struktur_Organisasi_JabatanItem.cs" />
+    <Compile Include="tbl_userItem.cs" />
+    <Compile Include="tbl_user_roleItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pertamina.CORSEC.Dto\Pertamina.CORSEC.Dto.csproj">
+      <Project>{47df4fe7-191c-4f00-aef6-1e509b7595bf}</Project>
+      <Name>Pertamina.CORSEC.Dto</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
