@@ -1,0 +1,1 @@
+﻿<%@ WebHandler Language="C#" Class="Pertamina.CORSEC.Business.Handler.LogoCommunicationCampaignHandler, Pertamina.CORSEC.Business" %>
