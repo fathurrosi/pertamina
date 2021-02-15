@@ -1,0 +1,65 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Frontend.Master" AutoEventWireup="true" CodeBehind="details.aspx.cs" Inherits="Pertamina.CORSEC._2019.CollateralCorporate.details" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
+
+    <!-- begin:: Content -->
+    <div class="kt-content-height">
+        <div class="kt-content kt-content--fit-top  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor"
+            id="kt_content">
+
+            <!-- begin:: Content -->
+              <div class="kt-sc" style="background-image: url('<%: ResolveUrl("~/Content/assets/media/bg/bg-9.jpg") %>')">
+                <div class="kt-container ">
+                    <div class="kt-sc__bottom">
+                        <h3 class="kt-sc__heading kt-heading kt-heading--center kt-heading--xxl kt-heading--medium">
+                            <asp:Label ID="lblJudul" runat="server" Text="Label"></asp:Label>
+                        
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kt-container">
+                <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-toolbar">                          
+                            <asp:Literal ID="lblTabImages" runat="server" Visible="true"></asp:Literal>
+                        </div>
+                        <div class="kt-portlet__head-toolbar">
+                            <b>Urutkan:</b>
+                            <div class="btn-group ml-1" role="group" aria-label="Button group with nested dropdown">
+                                <div class="btn-group" role="group">
+                                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        5 Tahun Terakhir & Archive
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                        <a class="dropdown-item" href="#">5 Tahun Terakhir & Archive A</a>
+                                        <a class="dropdown-item" href="#">5 Tahun Terakhir & Archive B</a>
+                                        <a class="dropdown-item" href="#">5 Tahun Terakhir & Archive C</a>
+                                        <a class="dropdown-item" href="#">5 Tahun Terakhir & Archive D</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-portlet__body">
+                        <div class="tab-content">
+                            <asp:Literal ID="lblImages" runat="server" Visible="true"></asp:Literal>
+                        </div>
+                    </div>
+                </div>
+                <a href="collateral-corporate.aspx" class="btn btn-secondary mt-4"><i class="fa fa-less-than"></i>
+                    Back</a>
+            </div>
+
+            <!-- end:: Content -->
+        </div>
+    </div>
+    <!-- end:: Content -->
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="script" runat="server">
+</asp:Content>
