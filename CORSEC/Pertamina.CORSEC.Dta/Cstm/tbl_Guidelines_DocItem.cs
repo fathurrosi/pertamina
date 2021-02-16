@@ -39,7 +39,7 @@ namespace Pertamina.CORSEC.Dta
 
             WITH [Paging_tbl_Guidelines_Doc] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Guidelines_Doc].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Guidelines_Doc].[id] DESC) AS PAGING_ROW_NUMBER,
 [tbl_Guidelines_Doc].*, f.[file_id], f.[file_ext], f.[file_ext]
                 FROM    [tbl_Guidelines_Doc]
                 LEFT JOIN [tbl_Guidelines_File] f on f.ref_id = [tbl_Guidelines_Doc].id
@@ -67,7 +67,7 @@ namespace Pertamina.CORSEC.Dta
 
             IDBHelper context = new DBHelper();
             string sqlQuery = @"
-SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Guidelines_Doc].[id]) AS PAGING_ROW_NUMBER,
+SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Guidelines_Doc].[id] DESC) AS PAGING_ROW_NUMBER,
     [tbl_Guidelines_Doc].*, f.[file_id], f.[file_ext]
 			into	#temp
             FROM    [tbl_Guidelines_Doc]
@@ -153,7 +153,7 @@ SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Guidelines_Doc].[id]) AS PAGING_ROW_NUM
             string sqlQuery = @"
             WITH [Paging_tbl_Guidelines_Doc] AS
             (
-              SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Guidelines_Doc].[id]) AS PAGING_ROW_NUMBER,
+              SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Guidelines_Doc].[id] DESC) AS PAGING_ROW_NUMBER,
         [tbl_Guidelines_Doc].*, f.[file_id], f.[file_ext]
         FROM    [tbl_Guidelines_Doc]
         LEFT JOIN [tbl_Guidelines_File] f on f.ref_id = [tbl_Guidelines_Doc].id

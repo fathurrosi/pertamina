@@ -56,7 +56,7 @@ namespace Pertamina.CORSEC.Dta
             string sqlQuery = @"
             WITH [Paging_tbl_brand_Sponsorship_File] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_brand_Sponsorship_File].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_brand_Sponsorship_File].[id] DESC) AS PAGING_ROW_NUMBER,
                         [tbl_brand_Sponsorship_File].*
                 FROM    [tbl_brand_Sponsorship_File]
                 WHERE sponsorship_type=2
@@ -85,7 +85,7 @@ namespace Pertamina.CORSEC.Dta
 
             IDBHelper context = new DBHelper();
             string sqlQuery = @"
-            SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_brand_Sponsorship_File].[id]) AS PAGING_ROW_NUMBER,
+            SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_brand_Sponsorship_File].[id] DESC) AS PAGING_ROW_NUMBER,
                     [tbl_brand_Sponsorship_File].*
             into	#temp
             FROM    [tbl_brand_Sponsorship_File]

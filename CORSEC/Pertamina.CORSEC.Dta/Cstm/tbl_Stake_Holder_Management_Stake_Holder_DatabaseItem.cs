@@ -39,7 +39,7 @@ AND ( year=@year OR @year =0 )
             string sqlQuery = @"
             WITH [Paging_tbl_Stake_Holder_Management_Stake_Holder_Database] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Stake_Holder_Management_Stake_Holder_Database].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Stake_Holder_Management_Stake_Holder_Database].[id] DESC) AS PAGING_ROW_NUMBER,
                         [tbl_Stake_Holder_Management_Stake_Holder_Database].*
                 FROM    [tbl_Stake_Holder_Management_Stake_Holder_Database]
                 WHERE ( data_type =@data_type  OR @data_type =0 )
@@ -70,7 +70,7 @@ AND ( year=@year OR @year =0 )
             string sqlQuery = @"
             WITH [Paging_tbl_Stake_Holder_Management_Stake_Holder_Database] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Stake_Holder_Management_Stake_Holder_Database].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Stake_Holder_Management_Stake_Holder_Database].[id] DESC) AS PAGING_ROW_NUMBER,
                         [tbl_Stake_Holder_Management_Stake_Holder_Database].*
                 FROM    [tbl_Stake_Holder_Management_Stake_Holder_Database]
                 WHERE ( data_type = -1)                

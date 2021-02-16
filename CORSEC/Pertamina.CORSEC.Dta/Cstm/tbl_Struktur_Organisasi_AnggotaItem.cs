@@ -21,7 +21,7 @@ namespace Pertamina.CORSEC.Dta
             string sqlQuery = @"
             WITH [Paging_tbl_Struktur_Organisasi_Anggota] AS
             (
-  SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Struktur_Organisasi_Anggota].[id]) AS PAGING_ROW_NUMBER,
+  SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Struktur_Organisasi_Anggota].[id] DESC) AS PAGING_ROW_NUMBER,
 	   [tbl_Struktur_Organisasi_Anggota].[id]
       ,[tbl_Struktur_Organisasi_Anggota].[nama]
       ,[tbl_Struktur_Organisasi_Anggota].[nip]

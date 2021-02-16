@@ -155,7 +155,7 @@ WHERE   [ID]  = @ID";
             string sqlQuery = @"
             WITH [Paging_tbl_Menu] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Menu].[ID]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Menu].[ID] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_Menu].*
                 FROM    [tbl_Menu]
             )

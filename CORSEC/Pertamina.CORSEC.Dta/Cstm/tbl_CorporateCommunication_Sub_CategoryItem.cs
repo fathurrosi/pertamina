@@ -35,7 +35,7 @@ namespace Pertamina.CORSEC.Dta
             string sqlQuery = @"
             WITH [Paging_tbl_CorporateCommunication_Sub_Category] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_CorporateCommunication_Sub_Category].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_CorporateCommunication_Sub_Category].[id] DESC) AS PAGING_ROW_NUMBER,
                         [tbl_CorporateCommunication_Sub_Category].*
                 FROM    [tbl_CorporateCommunication_Sub_Category]
                 where Category=@Category

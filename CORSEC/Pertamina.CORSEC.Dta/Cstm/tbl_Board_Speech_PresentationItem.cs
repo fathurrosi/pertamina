@@ -20,7 +20,7 @@ namespace Pertamina.CORSEC.Dta
 
             IDBHelper context = new DBHelper();
             string sqlQuery = @"
-            SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Board_Speech_Presentation].[id]) AS PAGING_ROW_NUMBER,
+            SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Board_Speech_Presentation].[id] DESC) AS PAGING_ROW_NUMBER,
             [tbl_Board_Speech_Presentation].*, f.[file_id], f.[file_ext], f.file_size, f.file_blob   
 			into	#temp
             FROM    [tbl_Board_Speech_Presentation]
@@ -75,7 +75,7 @@ namespace Pertamina.CORSEC.Dta
 
             IDBHelper context = new DBHelper();
             string sqlQuery = @"
-            SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Board_Speech_Presentation].[id]) AS PAGING_ROW_NUMBER,
+            SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Board_Speech_Presentation].[id] DESC) AS PAGING_ROW_NUMBER,
             [tbl_Board_Speech_Presentation].*, f.[file_id], f.[file_ext], f.file_size, null file_blob   
 			into	#temp
             FROM    [tbl_Board_Speech_Presentation]
@@ -154,7 +154,7 @@ namespace Pertamina.CORSEC.Dta
             string sqlQuery = @"
             WITH [Paging_tbl_Board_Speech_Presentation] AS
             (
-              SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Board_Speech_Presentation].[id]) AS PAGING_ROW_NUMBER,
+              SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Board_Speech_Presentation].[id] DESC) AS PAGING_ROW_NUMBER,
         [tbl_Board_Speech_Presentation].*, f.[file_id], f.[file_ext], f.[file_size], null file_blob
         FROM    [tbl_Board_Speech_Presentation]
         LEFT JOIN [tbl_Board_Speech_Presentation_File] f on f.ref_id = [tbl_Board_Speech_Presentation].id AND f.ref_name ='tbl_Board_Speech_Presentation'

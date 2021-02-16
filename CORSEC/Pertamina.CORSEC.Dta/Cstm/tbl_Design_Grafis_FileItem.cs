@@ -21,7 +21,7 @@ namespace Pertamina.CORSEC.Dta
 
             IDBHelper context = new DBHelper();
             string sqlQuery = @"
-SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Design_Grafis_File].[id]) AS PAGING_ROW_NUMBER,
+SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Design_Grafis_File].[id] DESC) AS PAGING_ROW_NUMBER,
         [tbl_Design_Grafis_File].*
 INTO #temp
 FROM    [tbl_Design_Grafis_File]

@@ -154,7 +154,7 @@ WHERE   [id]  = @id";
             string sqlQuery = @"
             WITH [Paging_tbl_Media_Video] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Media_Video].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Media_Video].[id] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_Media_Video].*
                 FROM    [tbl_Media_Video]
             )

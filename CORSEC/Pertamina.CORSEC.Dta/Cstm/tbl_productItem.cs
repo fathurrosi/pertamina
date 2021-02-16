@@ -13,7 +13,7 @@ namespace Pertamina.CORSEC.Dta
             IDBHelper context = new DBHelper();
             string sqlQuery = @"
 
-select  ROW_NUMBER() OVER (ORDER BY t1.[id]) AS PAGING_ROW_NUMBER, t1.*
+select  ROW_NUMBER() OVER (ORDER BY t1.[id] DESC) AS PAGING_ROW_NUMBER, t1.*
 ,t3.[file_type]
 ,t3.[file_path]
 ,t3.[file_name]
@@ -43,7 +43,7 @@ where wl.Username =@Username
             IDBHelper context = new DBHelper();
             string sqlQuery = @"
         
-select  ROW_NUMBER() OVER (ORDER BY t1.[id]) AS PAGING_ROW_NUMBER, t1.*
+select  ROW_NUMBER() OVER (ORDER BY t1.[id] DESC) AS PAGING_ROW_NUMBER, t1.*
 ,t3.[file_type]
 ,t3.[file_path]
 ,t3.[file_name]
@@ -84,7 +84,7 @@ where t1.id=@id
 
             IDBHelper context = new DBHelper();
             string sqlQuery = @"
-            SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_product].[id]) AS PAGING_ROW_NUMBER,
+            SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_product].[id] DESC) AS PAGING_ROW_NUMBER,
                     [tbl_product].*
             into	#temp
             FROM    [tbl_product]
@@ -115,7 +115,7 @@ where t1.id=@id
             if (sort == 2)
             {
                 sqlQuery = @"
-            SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_product].[title] asc) AS PAGING_ROW_NUMBER,
+            SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_product].[title]  DESC) AS PAGING_ROW_NUMBER,
                     [tbl_product].*
             into	#temp
             FROM    [tbl_product]
@@ -147,7 +147,7 @@ where t1.id=@id
             else if (sort == 3)
             {
                 sqlQuery = @"
-            SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_product].[title] desc) AS PAGING_ROW_NUMBER,
+            SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_product].[title]  DESC) AS PAGING_ROW_NUMBER,
                     [tbl_product].*
             into	#temp
             FROM    [tbl_product]
@@ -225,7 +225,7 @@ where t1.id=@id
             string sqlQuery = @"
             WITH [Paging_tbl_product] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_product].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_product].[id] DESC) AS PAGING_ROW_NUMBER,
                         [tbl_product].*
                 FROM    [tbl_product]
                 WHERE product_type=@product_type

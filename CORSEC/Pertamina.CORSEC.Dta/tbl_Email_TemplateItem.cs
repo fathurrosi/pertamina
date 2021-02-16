@@ -128,7 +128,7 @@ WHERE   [code]  = @code";
             string sqlQuery = @"
             WITH [Paging_tbl_Email_Template] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Email_Template].[code]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Email_Template].[code] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_Email_Template].*
                 FROM    [tbl_Email_Template]
             )

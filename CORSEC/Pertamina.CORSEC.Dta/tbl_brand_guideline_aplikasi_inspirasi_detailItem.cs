@@ -154,7 +154,7 @@ WHERE   [id]  = @id";
             string sqlQuery = @"
             WITH [Paging_tbl_brand_guideline_aplikasi_inspirasi_detail] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_brand_guideline_aplikasi_inspirasi_detail].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_brand_guideline_aplikasi_inspirasi_detail].[id] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_brand_guideline_aplikasi_inspirasi_detail].*
                 FROM    [tbl_brand_guideline_aplikasi_inspirasi_detail]
             )

@@ -49,7 +49,7 @@ UPDATE [tbl_Struktur_Organisasi_Diagram_Corcom]
             string sqlQuery = @"
             WITH [Paging_tbl_Struktur_Organisasi_Diagram_Corcom] AS
             (
-SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Struktur_Organisasi_Diagram_Corcom].[group_id]) AS PAGING_ROW_NUMBER,        
+SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Struktur_Organisasi_Diagram_Corcom].[group_id] DESC) AS PAGING_ROW_NUMBER,        
        [tbl_Struktur_Organisasi_Diagram_Corcom].[id]
       ,[tbl_Struktur_Organisasi_Diagram_Corcom].[jabatan_id]
       ,jabatan.name as [jabatan_nama]

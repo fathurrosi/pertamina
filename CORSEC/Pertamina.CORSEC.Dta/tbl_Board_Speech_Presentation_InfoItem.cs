@@ -136,7 +136,7 @@ WHERE   [id]  = @id";
             string sqlQuery = @"
             WITH [Paging_tbl_Board_Speech_Presentation_Info] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Board_Speech_Presentation_Info].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Board_Speech_Presentation_Info].[id] DESC) AS PAGING_ROW_NUMBER,
                         [tbl_Board_Speech_Presentation_Info].*
                 FROM    [tbl_Board_Speech_Presentation_Info]
             )

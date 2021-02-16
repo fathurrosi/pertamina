@@ -157,7 +157,7 @@ WHERE   [id]  = @id";
             string sqlQuery = @"
             WITH [Paging_tbl_Media] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Media].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Media].[id] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_Media].*
                 FROM    [tbl_Media]
             )

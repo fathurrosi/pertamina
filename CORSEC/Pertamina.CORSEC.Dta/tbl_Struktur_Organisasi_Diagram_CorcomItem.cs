@@ -148,7 +148,7 @@ WHERE   [id]  = @id";
             string sqlQuery = @"
             WITH [Paging_tbl_Struktur_Organisasi_Diagram_Corcom] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Struktur_Organisasi_Diagram_Corcom].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Struktur_Organisasi_Diagram_Corcom].[id] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_Struktur_Organisasi_Diagram_Corcom].*
                 FROM    [tbl_Struktur_Organisasi_Diagram_Corcom]
             )

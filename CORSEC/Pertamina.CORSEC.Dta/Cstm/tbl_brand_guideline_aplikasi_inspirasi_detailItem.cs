@@ -20,7 +20,7 @@ namespace Pertamina.CORSEC.Dta
 
             IDBHelper context = new DBHelper();
             string sqlQuery = @"
-            SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_brand_guideline_aplikasi_inspirasi_detail].[id]) AS PAGING_ROW_NUMBER,
+            SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_brand_guideline_aplikasi_inspirasi_detail].[id] DESC) AS PAGING_ROW_NUMBER,
             [tbl_brand_guideline_aplikasi_inspirasi_detail].*
 			into	#temp
             FROM    [tbl_brand_guideline_aplikasi_inspirasi_detail]

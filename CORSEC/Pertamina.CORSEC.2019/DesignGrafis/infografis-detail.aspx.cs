@@ -48,7 +48,7 @@ namespace Pertamina.CORSEC._2019.DesignGrafis
                 {
                     string downloadUrl = ResolveUrl(string.Format("~/DesignGrafisHandler.ashx?id={0}", item.id));
                     lblImages.Text = "";
-                    aBack.HRef = ResolveUrl(string.Format("~/DesignGrafis/infografis.aaspx{0}&tab={1}", PrevUrl, item.data_type));
+                    aBack.HRef = ResolveUrl(string.Format("~/DesignGrafis/infografis.aspx{0}&tab={1}", PrevUrl, item.data_type));
                     string templateImages = @"
 <div class=""carousel-item{0}"">
     <img src=""{1}"" class=""center-block h-100"" alt=""..."">

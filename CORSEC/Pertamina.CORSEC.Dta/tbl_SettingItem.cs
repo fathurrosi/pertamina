@@ -130,7 +130,7 @@ WHERE   [id]  = @id";
             string sqlQuery = @"
             WITH [Paging_tbl_Setting] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Setting].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Setting].[id] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_Setting].*
                 FROM    [tbl_Setting]
             )

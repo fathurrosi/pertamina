@@ -151,7 +151,7 @@ WHERE   [id]  = @id";
             string sqlQuery = @"
             WITH [Paging_tbl_Profile_Visi_Misi] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Profile_Visi_Misi].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Profile_Visi_Misi].[id] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_Profile_Visi_Misi].*
                 FROM    [tbl_Profile_Visi_Misi]
             )

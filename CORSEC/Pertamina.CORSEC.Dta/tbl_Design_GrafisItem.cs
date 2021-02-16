@@ -157,7 +157,7 @@ WHERE   [id]  = @id";
             string sqlQuery = @"
             WITH [Paging_tbl_Design_Grafis] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Design_Grafis].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Design_Grafis].[id] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_Design_Grafis].*
                 FROM    [tbl_Design_Grafis]
             )

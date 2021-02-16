@@ -41,7 +41,7 @@ namespace Pertamina.CORSEC.Dta
             string sqlQuery = @"
             WITH [Paging_tbl_CSR_SMEP_Program] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_CSR_SMEP_Program].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_CSR_SMEP_Program].[id] DESC) AS PAGING_ROW_NUMBER,
                         [tbl_CSR_SMEP_Program].*
                 FROM    [tbl_CSR_SMEP_Program]
                 WHERE category in (1,2) AND  ISNULL( is_dynamic,0)  <> 1
@@ -81,7 +81,7 @@ namespace Pertamina.CORSEC.Dta
             string sqlQuery = @"
             WITH [Paging_tbl_CSR_SMEP_Program] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_CSR_SMEP_Program].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_CSR_SMEP_Program].[id] DESC) AS PAGING_ROW_NUMBER,
                         [tbl_CSR_SMEP_Program].*
                 FROM    [tbl_CSR_SMEP_Program]
                 WHERE category in (3,4) AND  ISNULL( is_dynamic,0)  <> 1
@@ -121,7 +121,7 @@ namespace Pertamina.CORSEC.Dta
             string sqlQuery = @"
             WITH [Paging_tbl_CSR_SMEP_Program] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_CSR_SMEP_Program].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_CSR_SMEP_Program].[id] DESC) AS PAGING_ROW_NUMBER,
                         [tbl_CSR_SMEP_Program].*
                 FROM    [tbl_CSR_SMEP_Program]
                 WHERE data_type is null AND is_dynamic = 1
@@ -201,7 +201,7 @@ Order by b.id
             string sqlQuery = @"
             WITH [Paging_tbl_CSR_SMEP_Program] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_CSR_SMEP_Program].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_CSR_SMEP_Program].[id] DESC) AS PAGING_ROW_NUMBER,
                         [tbl_CSR_SMEP_Program].*
                 FROM    [tbl_CSR_SMEP_Program]
 

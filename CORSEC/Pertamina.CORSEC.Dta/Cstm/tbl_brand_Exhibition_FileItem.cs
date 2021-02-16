@@ -59,7 +59,7 @@ namespace Pertamina.CORSEC.Dta
             string sqlQuery = @"
             WITH [Paging_tbl_brand_Exhibition_File] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_brand_Exhibition_File].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_brand_Exhibition_File].[id] DESC) AS PAGING_ROW_NUMBER,
                         [tbl_brand_Exhibition_File].*
                 FROM    [tbl_brand_Exhibition_File]
                 WHERE exhibition_type=2
@@ -88,7 +88,7 @@ namespace Pertamina.CORSEC.Dta
 
             IDBHelper context = new DBHelper();
             string sqlQuery = @"
-            SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_brand_Exhibition_File].[id]) AS PAGING_ROW_NUMBER,
+            SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_brand_Exhibition_File].[id] DESC) AS PAGING_ROW_NUMBER,
                     [tbl_brand_Exhibition_File].*
             into	#temp
             FROM    [tbl_brand_Exhibition_File]

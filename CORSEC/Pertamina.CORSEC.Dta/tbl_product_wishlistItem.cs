@@ -130,7 +130,7 @@ WHERE   [id]  = @id";
             string sqlQuery = @"
             WITH [Paging_tbl_product_wishlist] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_product_wishlist].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_product_wishlist].[id] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_product_wishlist].*
                 FROM    [tbl_product_wishlist]
             )

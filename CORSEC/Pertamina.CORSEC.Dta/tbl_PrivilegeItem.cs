@@ -141,7 +141,7 @@ WHERE   [RoleID]  = @RoleID
             string sqlQuery = @"
             WITH [Paging_tbl_Privilege] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Privilege].[RoleID], [tbl_Privilege].[MenuID]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Privilege].[RoleID], [tbl_Privilege].[MenuID] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_Privilege].*
                 FROM    [tbl_Privilege]
             )

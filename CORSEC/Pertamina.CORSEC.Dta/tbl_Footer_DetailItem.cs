@@ -136,7 +136,7 @@ WHERE   [id]  = @id";
             string sqlQuery = @"
             WITH [Paging_tbl_Footer_Detail] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Footer_Detail].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Footer_Detail].[id] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_Footer_Detail].*
                 FROM    [tbl_Footer_Detail]
             )

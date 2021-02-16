@@ -136,7 +136,7 @@ WHERE   [id]  = @id";
             string sqlQuery = @"
             WITH [Paging_tbl_CSR_SMEP_Program_Related_Document] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_CSR_SMEP_Program_Related_Document].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_CSR_SMEP_Program_Related_Document].[id] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_CSR_SMEP_Program_Related_Document].*
                 FROM    [tbl_CSR_SMEP_Program_Related_Document]
             )

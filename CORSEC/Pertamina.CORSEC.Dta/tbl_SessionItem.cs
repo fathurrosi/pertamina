@@ -127,7 +127,7 @@ WHERE   [id]  = @id";
             string sqlQuery = @"
             WITH [Paging_tbl_Session] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Session].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Session].[id] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_Session].*
                 FROM    [tbl_Session]
             )

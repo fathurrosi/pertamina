@@ -140,7 +140,7 @@ WHERE   [Username]  = @Username";
             string sqlQuery = @"
             WITH [Paging_tbl_User] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_User].[Username]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_User].[Username] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_User].*
                 FROM    [tbl_User]
             )

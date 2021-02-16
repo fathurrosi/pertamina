@@ -142,7 +142,7 @@ WHERE   [file_id]  = @file_id";
             string sqlQuery = @"
             WITH [Paging_tbl_Guidelines_File] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Guidelines_File].[file_id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Guidelines_File].[file_id] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_Guidelines_File].*
                 FROM    [tbl_Guidelines_File]
             )

@@ -145,7 +145,7 @@ WHERE   [id]  = @id";
             string sqlQuery = @"
             WITH [Paging_tbl_Collateral_Corporate_Item] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Collateral_Corporate_Item].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Collateral_Corporate_Item].[id] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_Collateral_Corporate_Item].*
                 FROM    [tbl_Collateral_Corporate_Item]
             )

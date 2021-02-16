@@ -175,7 +175,7 @@ WHERE   [id]  = @id";
             string sqlQuery = @"
             WITH [Paging_tbl_brand_Communication_Campaign_user_manual] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_brand_Communication_Campaign_user_manual].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_brand_Communication_Campaign_user_manual].[id] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_brand_Communication_Campaign_user_manual].*
                 FROM    [tbl_brand_Communication_Campaign_user_manual]
             )

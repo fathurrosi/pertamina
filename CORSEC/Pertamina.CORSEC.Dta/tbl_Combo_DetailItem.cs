@@ -133,7 +133,7 @@ WHERE   [id]  = @id";
             string sqlQuery = @"
             WITH [Paging_tbl_Combo_Detail] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Combo_Detail].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Combo_Detail].[id] DESC ) AS PAGING_ROW_NUMBER,
                         [tbl_Combo_Detail].*
                 FROM    [tbl_Combo_Detail]
             )

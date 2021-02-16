@@ -40,7 +40,7 @@ namespace Pertamina.CORSEC.Dta
             string sqlQuery = @"
             WITH [Paging_tbl_Program] AS
             (
-              SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Program].[id]) AS PAGING_ROW_NUMBER,
+              SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Program].[id] DESC) AS PAGING_ROW_NUMBER,
         [tbl_Program].*, f.[file_id], f.[file_ext], null file_blob
         FROM    [tbl_Program]
         LEFT JOIN [tbl_File_Program] f on f.ref_id = [tbl_Program].id
@@ -75,7 +75,7 @@ namespace Pertamina.CORSEC.Dta
             string sqlQuery = @"
             WITH [Paging_tbl_Program] AS
             (
-              SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Program].[id]) AS PAGING_ROW_NUMBER,
+              SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_Program].[id] DESC) AS PAGING_ROW_NUMBER,
         [tbl_Program].*, f.[file_id], f.[file_ext],f.file_blob
         FROM    [tbl_Program]
         LEFT JOIN [tbl_File_Program] f on f.ref_id = [tbl_Program].id

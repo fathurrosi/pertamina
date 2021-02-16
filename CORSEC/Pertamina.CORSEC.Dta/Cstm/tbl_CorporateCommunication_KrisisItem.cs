@@ -41,7 +41,7 @@ AND  (Jenis_Documen =@Jenis_Documen OR @Jenis_Documen =0)
 
             WITH [Paging_tbl_CorporateCommunication_Krisis] AS
             (
-                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_CorporateCommunication_Krisis].[id]) AS PAGING_ROW_NUMBER,
+                SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_CorporateCommunication_Krisis].[id] DESC) AS PAGING_ROW_NUMBER,
                         [tbl_CorporateCommunication_Krisis].*
                 FROM    [tbl_CorporateCommunication_Krisis]
                 WHERE ([SubCategory]  = @SubCategory OR @SubCategory=0)

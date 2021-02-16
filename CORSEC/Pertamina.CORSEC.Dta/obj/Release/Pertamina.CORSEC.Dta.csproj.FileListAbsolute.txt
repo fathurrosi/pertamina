@@ -1,0 +1,9 @@
+G:\Works\PERTAMINA\CORSEC\Pertamina.CORSEC.Dta\bin\Release\Pertamina.CORSEC.Dta.dll
+G:\Works\PERTAMINA\CORSEC\Pertamina.CORSEC.Dta\bin\Release\Pertamina.CORSEC.Dta.pdb
+G:\Works\PERTAMINA\CORSEC\Pertamina.CORSEC.Dta\bin\Release\DBHelper.dll
+G:\Works\PERTAMINA\CORSEC\Pertamina.CORSEC.Dta\bin\Release\MySql.Data.dll
+G:\Works\PERTAMINA\CORSEC\Pertamina.CORSEC.Dta\bin\Release\Pertamina.CORSEC.Dto.dll
+G:\Works\PERTAMINA\CORSEC\Pertamina.CORSEC.Dta\bin\Release\Pertamina.CORSEC.Dto.pdb
+G:\Works\PERTAMINA\CORSEC\Pertamina.CORSEC.Dta\obj\Release\Pertamina.CORSEC.Dta.csprojResolveAssemblyReference.cache
+G:\Works\PERTAMINA\CORSEC\Pertamina.CORSEC.Dta\obj\Release\Pertamina.CORSEC.Dta.dll
+G:\Works\PERTAMINA\CORSEC\Pertamina.CORSEC.Dta\obj\Release\Pertamina.CORSEC.Dta.pdb
