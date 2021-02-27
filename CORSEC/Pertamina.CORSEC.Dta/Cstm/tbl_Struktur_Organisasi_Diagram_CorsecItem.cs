@@ -10,6 +10,23 @@ namespace Pertamina.CORSEC.Dta
 {
     public partial class tbl_Struktur_Organisasi_Diagram_CorsecItem
     {
+        public static bool IsExistByJabatan(int id)
+        {
+            IDBHelper context = new DBHelper();
+            string sqlQuery = @"
+select count(1) total from [tbl_Struktur_Organisasi_Diagram_Corsec]
+where parent_jabatan_id = @parent_jabatan_id
+or jabatan_id =@jabatan_id
+";
+            context.AddParameter("@parent_jabatan_id", id);
+            context.AddParameter("@jabatan_id", id);
+            context.CommandText = sqlQuery;
+            context.CommandType = System.Data.CommandType.Text;
+            object obj = DBUtil.ExecuteScalar(context);
+            int result = -1;
+            int.TryParse(string.Format("{0}", obj), out result);
+            return result > 0;
+        }
 
         /// <summary>
         /// Execute Insert to TABLE [tbl_Struktur_Organisasi_Diagram_Corsec]

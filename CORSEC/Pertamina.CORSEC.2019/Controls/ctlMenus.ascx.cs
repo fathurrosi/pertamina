@@ -37,10 +37,10 @@ namespace Pertamina.CORSEC._2019.Controls
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-
             List<tbl_Menu> list = Utilities.GetFRONTEND_MENU();
             GenerateMenus(list);
         }
+
 
         private tbl_Menu GetGrandParent(tbl_Menu child, List<tbl_Menu> list)
         {
@@ -93,7 +93,7 @@ namespace Pertamina.CORSEC._2019.Controls
         private HtmlGenericControl AddMenu(List<tbl_Menu> children, List<tbl_Menu> grandChild = null)
         {
             if (grandChild == null) grandChild = new List<tbl_Menu>();
-            //List<tbl_Menu> grandChildren = children.Where(t => !children.Select(u => u.ID).ToList().Contains(t.ID)).OrderBy(t => t.Sequence).ToList();
+
             HtmlGenericControl ul = new HtmlGenericControl("ul");
             ul.Attributes.Add("class", "kt-menu__subnav");
             children.ForEach(t =>
@@ -107,10 +107,10 @@ namespace Pertamina.CORSEC._2019.Controls
                 if (!hasChild)
                 {
                     bool selected = t.ID == MID;
-                    //<li class="kt-menu__item kt-menu__item--active" 
+
                     HtmlGenericControl li = new HtmlGenericControl("li");
                     li.Attributes.Add("class", selected ? "kt-menu__item kt-menu__item--active" : "kt-menu__item");
-                    //li.Attributes.Add("class", "kt-menu__item");
+
                     li.ID = id;
                     HtmlGenericControl anchor = new HtmlGenericControl("a");
                     anchor.Attributes.Add("href", ResolveUrl(url));
@@ -134,30 +134,12 @@ namespace Pertamina.CORSEC._2019.Controls
                 }
                 else
                 {
-                    /*
-                     
 
-                    <ul class="kt-menu__subnav">
-                        <li class="kt-menu__item kt-menu__item--submenu">
-                            <a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-                                <i class="kt-menu__link-bullet kt-menu__link-bullet--dot"> <span></span></i>
-                                <span class="kt-menu__link-text">Profil Corsec</span>
-                                <i class="kt-menu__ver-arrow la la-angle-right"></i>
-                            </a>
-                            <div class="kt-menu__submenu ">
-                                <span class="kt-menu__arrow"></span>
-                                <ul class="kt-menu__subnav">
-                                    <li class="kt-menu__item "><a href="visi-misi.html" class="kt-menu__link"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Overview, Visi & Misi</span></a></li>
-                                    <li class="kt-menu__item "><a href="strategic-partner.html" class="kt-menu__link"><i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i><span class="kt-menu__link-text">Strategic Partner</span></a></li>
-                                </ul>
-                            </div>
-                        </li>
-                     */
 
                     var parent = grandChild.Where(gc => gc.ID == MID).FirstOrDefault();
                     bool selected = (parent == null) ? false : t.ID == parent.ParentID;
                     HtmlGenericControl li = new HtmlGenericControl("li");
-                    //<li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--open kt-menu__item--here"
+
                     li.Attributes.Add("class", selected ? "kt-menu__item  kt-menu__item--submenu kt-menu__item--open kt-menu__item--here" : "kt-menu__item kt-menu__item--submenu");
                     li.ID = id;
 
@@ -171,7 +153,7 @@ namespace Pertamina.CORSEC._2019.Controls
                     i.Controls.Add(new HtmlGenericControl("span"));
 
                     anchor.Controls.Add(i);
-                    //class="kt-menu__ver-arrow la la-angle-right"
+
 
                     HtmlGenericControl span = new HtmlGenericControl("span");
                     span.Attributes.Add("class", "kt-menu__link-text");
@@ -220,7 +202,7 @@ namespace Pertamina.CORSEC._2019.Controls
             liParent.Attributes.Add("class", (selected) ? "kt-menu__item kt-menu__item--open kt-menu__item--here" : "kt-menu__item kt-menu__item--submenu");
             HtmlGenericControl anchor = new HtmlGenericControl("a");
             if (!hasChild && url != "#") anchor.Attributes.Add("href", ResolveUrl(url));
-            //anchor.Attributes.Add("class", (selected) ? "kt-menu__link" : "kt-menu__link kt-menu__toggle");
+
             anchor.Attributes.Add("class", "kt-menu__link kt-menu__toggle");
 
             HtmlGenericControl span = new HtmlGenericControl("span");
@@ -246,5 +228,7 @@ namespace Pertamina.CORSEC._2019.Controls
             liParent.Controls.Add(anchor);
             return liParent;
         }
+
+
     }
 }

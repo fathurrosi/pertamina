@@ -50,10 +50,10 @@
         <div class="col-sm-6">
             <div class="row">
                 <div class="col-sm-4">
-                    <asp:TextBox ID="lblHargaMulai" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="lblHargaMulai" runat="server" class="form-control allownumericwithdecimal"></asp:TextBox>
                 </div>
                 <div class="col-sm-4">
-                    <asp:TextBox ID="lblHargaSampai" runat="server" class="form-control"></asp:TextBox>
+                    <asp:TextBox ID="lblHargaSampai" runat="server" class="form-control allownumericwithdecimal"></asp:TextBox>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
         </div>
     </div>
 
-    
+
     <div class="form-group">
         <div class="col-sm-12" style="text-align: center">
             <div class="row">
@@ -148,7 +148,7 @@
         </div>
     </div>
 
-    
+
     <div class="form-group">
 
         <div class="col-sm-6">
@@ -181,6 +181,13 @@
                 readURL(this);
             });
 
+            $(".allownumericwithdecimal").on("keypress keyup blur", function (event) {
+                //this.value = this.value.replace(/[^0-9\.]/g,'');
+                $(this).val($(this).val().replace(/[^0-9\.]/g, ''));
+                if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+                    event.preventDefault();
+                }
+            });
         });
 
     </script>

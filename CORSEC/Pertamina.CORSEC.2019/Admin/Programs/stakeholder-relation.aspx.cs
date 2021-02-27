@@ -45,9 +45,9 @@ namespace Pertamina.CORSEC._2019.Admin.Programs
                 HyperLink hlEdit = e.Row.FindControl("hlEdit") as HyperLink;
                 hlEdit.NavigateUrl = string.Format("~/Admin/Programs/Details/Contents.aspx{0}&id={1}&tp={2}", PrevUrl, hiddenField.Value, (int)Business.Enum.Tipe_Program.Stakeholder_Relation);
 
-                //LinkButton lbtn = e.Row.FindControl("lbDel") as LinkButton;
-                //lbtn.OnClientClick = "return confirm('Anda yakin akan menghapus item ini?');";
-                //lbtn.CommandArgument = hiddenField.Value;
+                LinkButton lbtn = e.Row.FindControl("lbDel") as LinkButton;
+                lbtn.OnClientClick = "return confirm('Anda yakin akan menghapus item ini?');";
+                lbtn.CommandArgument = hiddenField.Value;
 
                 //HiddenField hdnFileID = e.Row.FindControl("hdnFileID") as HiddenField;
 

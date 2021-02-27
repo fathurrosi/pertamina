@@ -47,11 +47,17 @@ namespace Pertamina.CORSEC._2019.Admin.Organization.Details
                 item.created = DateTime.Now;
                 item.created_by = username;
             }
+            item.nama = lblName.Text;
+            if (string.IsNullOrEmpty(item.nama))
+            {
+                lblMessage.Text = GetValidationMessage("Nama Anggota harus diisi");
+                return;
+            }
 
             item.email = lblEmail.Text;
             item.nip = lblNip.Text;
             item.telp = lblTelp.Text;
-            item.nama = lblName.Text;
+
             item.jabatan_id = jabatan_id;
 
             item.updated = DateTime.Now;

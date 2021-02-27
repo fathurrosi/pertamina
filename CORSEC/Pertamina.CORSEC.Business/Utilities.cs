@@ -103,62 +103,70 @@ namespace Pertamina.CORSEC.Business
 
         public static List<tbl_Menu> GetFRONTEND_MENU()
         {
-            List<tbl_Menu> list = new List<tbl_Menu>();
-            object obj = SessionHelper.Get(SESSION_FRONTEND_MENU);
-            if (obj == null)
-            {
-                obj = tbl_MenuItem.GetByType("FRONT");
-                SessionHelper.Set(SESSION_FRONTEND_MENU, obj);
-            }
+            //List<tbl_Menu> list = new List<tbl_Menu>();
+            //object obj = SessionHelper.Get(SESSION_FRONTEND_MENU);
+            //if (obj == null)
+            //{
+            //    obj = tbl_MenuItem.GetByType("FRONT");
+            //    SessionHelper.Set(SESSION_FRONTEND_MENU, obj);
+            //}
 
-            list = obj as List<tbl_Menu>;
+            //list = obj as List<tbl_Menu>;
 
-            return list;
+            //return list;
+
+            return tbl_MenuItem.GetByType("FRONT"); 
         }
 
         public static List<tbl_Menu> GetBACKEND_MENU()
         {
-            List<tbl_Menu> list = new List<tbl_Menu>();
-            object obj = SessionHelper.Get(SESSION_BACKEND_MENU);
-            if (obj == null)
-            {
-                obj = tbl_MenuItem.GetByType("BACK");
-                SessionHelper.Set(SESSION_BACKEND_MENU, obj);
-            }
+            //List<tbl_Menu> list = new List<tbl_Menu>();
+            //object obj = SessionHelper.Get(SESSION_BACKEND_MENU);
+            //if (obj == null)
+            //{
+            //    obj = tbl_MenuItem.GetByType("BACK");
+            //    SessionHelper.Set(SESSION_BACKEND_MENU, obj);
+            //}
 
-            list = obj as List<tbl_Menu>;
+            //list = obj as List<tbl_Menu>;
 
-            return list;
+            //return list;
+
+            return tbl_MenuItem.GetByType("BACK");
         }
 
         public static List<tbl_Menu> GetTOP_MENU()
         {
-            List<tbl_Menu> list = new List<tbl_Menu>();
-            object obj = SessionHelper.Get(SESSION_TOP_MENU);
-            if (obj == null)
-            {
-                obj = tbl_MenuItem.GetByType("TOP");
-                SessionHelper.Set(SESSION_TOP_MENU, obj);
-            }
+            //List<tbl_Menu> list = new List<tbl_Menu>();
+            //object obj = SessionHelper.Get(SESSION_TOP_MENU);
+            //if (obj == null)
+            //{
+            //    obj = tbl_MenuItem.GetByType("TOP");
+            //    SessionHelper.Set(SESSION_TOP_MENU, obj);
+            //}
 
-            list = obj as List<tbl_Menu>;
+            //list = obj as List<tbl_Menu>;
 
-            return list;
+            //return list;
+
+            return tbl_MenuItem.GetByType("TOP");
         }
 
         public static List<tbl_Menu> GetTOP_BEFORE_MENU()
         {
-            List<tbl_Menu> list = new List<tbl_Menu>();
-            object obj = SessionHelper.Get(SESSION_TOP_BEFORE_MENU);
-            if (obj == null)
-            {
-                obj = tbl_MenuItem.GetByType("TOP_BEFORE");
-                SessionHelper.Set(SESSION_TOP_BEFORE_MENU, obj);
-            }
+            //List<tbl_Menu> list = new List<tbl_Menu>();
+            //object obj = SessionHelper.Get(SESSION_TOP_BEFORE_MENU);
+            //if (obj == null)
+            //{
+            //    obj = tbl_MenuItem.GetByType("TOP_BEFORE");
+            //    SessionHelper.Set(SESSION_TOP_BEFORE_MENU, obj);
+            //}
 
-            list = obj as List<tbl_Menu>;
+            //list = obj as List<tbl_Menu>;
 
-            return list;
+            //return list;
+
+            return tbl_MenuItem.GetByType("TOP_BEFORE");
         }
 
 
@@ -612,9 +620,9 @@ namespace Pertamina.CORSEC.Business
         public static string Crop(string text, int length)
         {
             if (text == null) text = string.Empty;
+            text = StripHTML(text);
             if (text.Length > length)
-            {
-                text = StripHTML(text);
+            {             
                 text = text.Substring(0, length);
             }
             return text.Trim();

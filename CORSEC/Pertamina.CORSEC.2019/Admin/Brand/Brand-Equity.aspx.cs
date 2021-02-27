@@ -45,9 +45,9 @@ namespace Pertamina.CORSEC._2019.Admin.Brand
                 HyperLink hlEdit = e.Row.FindControl("hlEdit") as HyperLink;
                 hlEdit.NavigateUrl = string.Format("~/Admin/Brand/Details/Brand-Equity.aspx{0}&id={1}", PrevUrl, hiddenField.Value);
 
-                //LinkButton lbtn = e.Row.FindControl("lbDel") as LinkButton;
-                //lbtn.OnClientClick = "return confirm('Anda yakin akan menghapus item ini?');";
-                //lbtn.CommandArgument = hiddenField.Value;
+                LinkButton lbtn = e.Row.FindControl("lbDel") as LinkButton;
+                lbtn.OnClientClick = "return confirm('Anda yakin akan menghapus item ini?');";
+                lbtn.CommandArgument = hiddenField.Value;
 
                 //HiddenField hdnFileID = e.Row.FindControl("hdnFileID") as HiddenField;
 

@@ -3,6 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
+
+    <div class="form-group">
+        <div class="col-sm-12" style="text-align: center">
+            <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+        </div>
+    </div>
+    <br />
+
     <asp:Button ID="btnCreate" runat="server" Text="Buat Baru" OnClick="btnCreate_Click" />
     <br />
     <br />
@@ -19,7 +27,7 @@
                     <asp:HyperLink ID="hlEdit" runat="server" ToolTip="Edit"><i class="fa fa-edit"></i></asp:HyperLink>
                     <asp:HiddenField ID="hdn" runat="server" Value='<%# Eval("id")%>' />
                     <asp:LinkButton runat="server" ID="lbDel" ToolTip="Delete" OnClick="lb_Click"><i class="far fa-trash-alt" ></i></asp:LinkButton>
-                    
+
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Nama Jabatan">
@@ -27,7 +35,7 @@
                     <%# Eval("name")%>
                 </ItemTemplate>
             </asp:TemplateField>
-          
+
 
             <asp:TemplateField HeaderText="Dibuat">
                 <ItemTemplate>

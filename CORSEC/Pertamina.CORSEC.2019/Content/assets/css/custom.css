@@ -880,69 +880,69 @@ a.thumbnail.active {
 /* ————————————————————–
   Tree core styles
 */
-.organization .kt-callout .kt-callout__body .kt-callout__content {
+#organization .kt-callout .kt-callout__body .kt-callout__content {
   color: #000;
 }
 
-.organization ul {
+#organization ul {
   list-style: none;
 }
 
-.organization .tree-view {
+#organization .tree-view {
   margin: 1em;
 }
 
-.organization .tree-view input {
+#organization .tree-view input {
   position: absolute;
   clip: rect(0, 0, 0, 0);
 }
 
-.organization .tree-view input~ul {
+#organization .tree-view input~ul {
   display: none;
 }
 
-.organization .tree-view input:checked~ul {
+#organization .tree-view input:checked~ul {
   display: block;
 }
 
 /* ————————————————————–
   Tree rows
 */
-.organization .tree-view li {
+#organization .tree-view li {
   line-height: 1.2;
   position: relative;
   padding: 0 0 1em 1em;
 }
 
-.organization .tree-view ul li {
+#organization .tree-view ul li {
   padding: 1em 0 0 1em;
 }
 
-.organization .tree-view>li:last-child {
+#organization .tree-view>li:last-child {
   padding-bottom: 0;
 }
 
 /* ————————————————————–
   Tree labels
 */
-.organization .tree_label {
+#organization .tree_label {
   position: relative;
   display: inline-block;
   background: #fff;
 }
 
-.organization label.tree_label {
+#organization label.tree_label {
   cursor: pointer;
 }
 
-.organization label.tree_label:hover {
+#organization label.tree_label:hover {
   color: #666;
 }
 
 /* ————————————————————–
   Tree expanded icon
 */
-.organization label.tree_label:before {
+#organization label.tree_label:before {
   background: #000;
   color: #fff;
   position: relative;
@@ -959,14 +959,14 @@ a.thumbnail.active {
   line-height: .9em;
 }
 
-.organization :checked~label.tree_label:before {
+#organization :checked~label.tree_label:before {
   content: '–';
 }
 
 /* ————————————————————–
   Tree branches
 */
-.organization .tree-view li:before {
+#organization .tree-view li:before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -978,7 +978,7 @@ a.thumbnail.active {
 }
 
 
-.organization .tree_label:after {
+#organization .tree_label:after {
   position: absolute;
   top: -2.1em;
   left: -2.4em;
@@ -991,11 +991,11 @@ a.thumbnail.active {
   content: '';
 }
 
-.organization label.tree_label:after {
+#organization label.tree_label:after {
   border-bottom: 0;
 }
 
-.organization :checked~label.tree_label:after {
+#organization :checked~label.tree_label:after {
   border-radius: 0 .3em 0 0;
   border-top: 1px solid #777;
   border-right: 1px solid #777;
@@ -1006,16 +1006,16 @@ a.thumbnail.active {
   height: auto;
 }
 
-.organization .tree-view li:last-child:before {
+#organization .tree-view li:last-child:before {
   height: 1em;
   bottom: auto;
 }
 
-.organization .tree-view>li:last-child:before {
+#organization .tree-view>li:last-child:before {
   display: none;
 }
 
-.organization .tree_custom {
+#organization .tree_custom {
   display: block;
   background: #eee;
   padding: 1em;

@@ -2,7 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-
+ <div class="form-group">
+        <div class="col-sm-12" style="text-align: center">
+            <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+        </div>
+    </div>
+    <br />
     <div class="form-group">
         <label class="control-label col-sm-2">Nama Jabatan</label>
         <div class="col-sm-6">

@@ -2071,6 +2071,7 @@
     <Content Include="Media\stock-photo.aspx" />
     <Content Include="Mitra\mitra-binaan-detail.aspx" />
     <Content Include="Mitra\mitra-binaan.aspx" />
+    <Content Include="Organisasi\str.aspx" />
     <Content Include="Organisasi\struktur.aspx" />
     <Content Include="ProfilCorsec\strategic-partner.aspx" />
     <Content Include="ProfilCorsec\visi-misi.aspx" />
@@ -2119,6 +2120,7 @@
     <Content Include="Content\assets\plugins\summernote\summernote-bs4.js.map" />
     <Content Include="Content\assets\plugins\summernote\summernote-lite.js.map" />
     <Content Include="Content\assets\plugins\summernote\summernote.js.map" />
+    <Content Include="Custom.Master" />
     <None Include="packages.config" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />
@@ -3505,6 +3507,13 @@
     <Compile Include="CSRSMEPP\strategi-pengelolaan.aspx.designer.cs">
       <DependentUpon>strategi-pengelolaan.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Custom.Master.cs">
+      <DependentUpon>Custom.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom.Master.designer.cs">
+      <DependentUpon>Custom.Master</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3703,6 +3712,13 @@
     </Compile>
     <Compile Include="Mitra\mitra-binaan.aspx.designer.cs">
       <DependentUpon>mitra-binaan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organisasi\str.aspx.cs">
+      <DependentUpon>str.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organisasi\str.aspx.designer.cs">
+      <DependentUpon>str.aspx</DependentUpon>
     </Compile>
     <Compile Include="Organisasi\struktur.aspx.cs">
       <DependentUpon>struktur.aspx</DependentUpon>

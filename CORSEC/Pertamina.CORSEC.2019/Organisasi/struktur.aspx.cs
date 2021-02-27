@@ -37,31 +37,12 @@ namespace Pertamina.CORSEC._2019.Organisasi
                         imageUrl = Business.Utilities.ByteToString(itemTemplate.file_blob);
                     }
                     lblHeader.Text = string.Format(header_template, imageUrl, itemTemplate.template_header);
-                    //lblTitle.Text = itemTemplate.template_title;
-                    //lblIsi.Text = itemTemplate.template_desc;
                 }
-
-                //tbl_Struktur_Organisasi item = tbl_Struktur_OrganisasiItem.GetAll().FirstOrDefault();
-                //if (item != null)
-                //{
-                //    string imageUrl = string.Format(" url('{0}') ", ResolveUrl("~/Content/assets/media/bg/bg-9.jpg"));
-                //    tbl_File file = tbl_FileItem.GetByReff(ReferenceTable.tbl_Struktur_Organisasi.ToString(), item.id.ToString());
-                //    if (file != null)
-                //    {
-                //        imageUrl = string.Format(" url('data:image/png;base64,{0}') ", Convert.ToBase64String(file.file_blob));
-                //    }
-
-                //    lblHeader.Text = string.Format(header_template, imageUrl, item.title);
-                //    //lblTittleSub.Text = item.sub_title;
-                //    //lblIsi.Text = item.body;
-                //    //lblRoot.Text = item.root_text;
-                //}
 
                 lblorganization_Corsec.Text = GetStructureCorsec();
                 lblorganization_Corcom.Text = GetStructureCorcom();
             }
         }
-
 
         string GetChildrenCorsec(int id, List<tbl_Struktur_Organisasi_Diagram_Corsec> structureList, List<tbl_Struktur_Organisasi_Anggota> memberList, List<tbl_Struktur_Organisasi_Jabatan> positionList)
         {
@@ -158,6 +139,7 @@ namespace Pertamina.CORSEC._2019.Organisasi
             {
 
                 tbl_Struktur_Organisasi_Jabatan jabatan = positionList.Where(t => t.id == child.jabatan_id).FirstOrDefault();
+                if (jabatan == null) continue;
                 tbl_Struktur_Organisasi_Anggota anggota = memberList.Where(t => t.jabatan_id == jabatan.id).FirstOrDefault();
                 if (anggota == null) anggota = new tbl_Struktur_Organisasi_Anggota();
 
@@ -190,8 +172,6 @@ namespace Pertamina.CORSEC._2019.Organisasi
 
             return result;
         }
-
-
 
         string GetChildrenCorcom(int id, List<tbl_Struktur_Organisasi_Diagram_Corcom> structureList, List<tbl_Struktur_Organisasi_Anggota> memberList, List<tbl_Struktur_Organisasi_Jabatan> positionList)
         {
@@ -288,6 +268,7 @@ namespace Pertamina.CORSEC._2019.Organisasi
             {
 
                 tbl_Struktur_Organisasi_Jabatan jabatan = positionList.Where(t => t.id == child.jabatan_id).FirstOrDefault();
+                if (jabatan == null) continue;
                 tbl_Struktur_Organisasi_Anggota anggota = memberList.Where(t => t.jabatan_id == jabatan.id).FirstOrDefault();
                 if (anggota == null) anggota = new tbl_Struktur_Organisasi_Anggota();
 
@@ -320,7 +301,6 @@ namespace Pertamina.CORSEC._2019.Organisasi
 
             return result;
         }
-
 
         string GetStructureCorcom()
         {
@@ -388,6 +368,7 @@ namespace Pertamina.CORSEC._2019.Organisasi
             foreach (tbl_Struktur_Organisasi_Diagram_Corcom parentItem in parentList)
             {
                 tbl_Struktur_Organisasi_Jabatan jabatan = positionList.Where(t => t.id == parentItem.jabatan_id).FirstOrDefault();
+                if (jabatan == null) continue;
                 tbl_Struktur_Organisasi_Anggota anggota = memberList.Where(t => t.jabatan_id == jabatan.id).FirstOrDefault();
                 if (anggota == null) anggota = new tbl_Struktur_Organisasi_Anggota();
 
@@ -404,6 +385,7 @@ namespace Pertamina.CORSEC._2019.Organisasi
                 {
                     parent_with_member += string.Format(template_parent, member, "");
                 }
+
             }
             result = string.Format(template_root, parent_with_member);
             return result;
@@ -428,7 +410,7 @@ namespace Pertamina.CORSEC._2019.Organisasi
 
             string template_parent = @"
 <ul class=""tree-view"">
-<li>
+    <li>
     {0}
 	{1}
 	</li>
@@ -439,7 +421,7 @@ namespace Pertamina.CORSEC._2019.Organisasi
  <input type=""checkbox"" id=""c{0}"" />
     <div class=""row"">
         <div class=""col-md-5"">
-            <!--begin::Accordion-->
+            
             <div class=""accordion accordion-solid accordion-toggle-plus"" id=""accordionExample{0}"">
                 <div class=""card"">
                     <div class=""card-header"" id=""headingOne{0}"">
@@ -465,9 +447,9 @@ namespace Pertamina.CORSEC._2019.Organisasi
                     </div>
                 </div>
             </div>
-            <!--end::Accordion-->
+            
         </div>
-        <!-- end 6th row -->
+        
     </div>
 ";
 
@@ -475,6 +457,7 @@ namespace Pertamina.CORSEC._2019.Organisasi
             foreach (tbl_Struktur_Organisasi_Diagram_Corsec parentItem in parentList)
             {
                 tbl_Struktur_Organisasi_Jabatan jabatan = positionList.Where(t => t.id == parentItem.jabatan_id).FirstOrDefault();
+                if (jabatan == null) continue;
                 tbl_Struktur_Organisasi_Anggota anggota = memberList.Where(t => t.jabatan_id == jabatan.id).FirstOrDefault();
                 if (anggota == null) anggota = new tbl_Struktur_Organisasi_Anggota();
 
@@ -491,6 +474,7 @@ namespace Pertamina.CORSEC._2019.Organisasi
                 {
                     parent_with_member += string.Format(template_parent, member, "");
                 }
+
             }
             result = string.Format(template_root, parent_with_member);
             return result;

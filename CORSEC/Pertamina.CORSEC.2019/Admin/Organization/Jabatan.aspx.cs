@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Pertamina.CORSEC.Business;
 using Pertamina.CORSEC.Dta;
+using Pertamina.CORSEC.Dto;
 
 namespace Pertamina.CORSEC._2019.Admin.Organization
 {
@@ -39,7 +40,7 @@ namespace Pertamina.CORSEC._2019.Admin.Organization
 
                 HyperLink hlEdit = e.Row.FindControl("hlEdit") as HyperLink;
                 hlEdit.NavigateUrl = string.Format("~/Admin/Organization/Details/Jabatan.aspx{0}&id={1}&t=e", PrevUrl, hiddenField.Value);
-                
+
                 LinkButton lbtn = e.Row.FindControl("lbDel") as LinkButton;
                 lbtn.OnClientClick = "return confirm('Anda yakin akan menghapus item ini?');";
                 lbtn.CommandArgument = hiddenField.Value;
@@ -48,12 +49,42 @@ namespace Pertamina.CORSEC._2019.Admin.Organization
 
         protected void lb_Click(object sender, EventArgs e)
         {
-            LinkButton lbtn = sender as LinkButton;
-            int _id = 0;
-            int.TryParse(lbtn.CommandArgument, out _id);
-            tbl_Struktur_Organisasi_JabatanItem.Delete(_id);
+            try
+            {
+                LinkButton lbtn = sender as LinkButton;
+                int _id = 0;
+                int.TryParse(lbtn.CommandArgument, out _id);
 
-            grid.DataBind();
+                tbl_Struktur_Organisasi_Jabatan item = tbl_Struktur_Organisasi_JabatanItem.GetByPK(_id);
+                if (item != null)
+                {
+                    bool usedInCorsec = tbl_Struktur_Organisasi_Diagram_CorsecItem.IsExistByJabatan(_id);
+                    bool usedInCorcom = tbl_Struktur_Organisasi_Diagram_CorcomItem.IsExistByJabatan(_id);
+
+                    if (usedInCorsec)
+                    {
+                        lblMessage.Text = GetValidationMessage(string.Format("Jabatan '{0}' ini tidak bisa dihapus. Karena masih digunakan diagram Corsec", item.name));
+                        return;
+                    }
+
+
+                    if (usedInCorcom)
+                    {
+                        lblMessage.Text = GetValidationMessage(string.Format("Jabatan '{0}' ini tidak bisa dihapus. Karena masih digunakan diagram Corcom", item.name));
+                        return;
+                    }
+
+                    tbl_Struktur_Organisasi_JabatanItem.Delete(_id);
+                }
+                grid.DataBind();
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex);
+
+                grid.DataBind();
+            }
         }
     }
 }

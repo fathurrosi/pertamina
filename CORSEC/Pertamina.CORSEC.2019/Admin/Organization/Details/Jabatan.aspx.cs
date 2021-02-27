@@ -39,7 +39,12 @@ namespace Pertamina.CORSEC._2019.Admin.Organization.Details
                 item.created_by = username;
             }
 
-            item.name = lblName.Text;
+            item.name = lblName.Text.Trim();
+            if (string.IsNullOrEmpty(item.name))
+            {
+                lblMessage.Text = GetValidationMessage("Nama Jabatan harus diisi");
+                return;
+            }
             item.updated = DateTime.Now;
             item.updated_by = username;
 
