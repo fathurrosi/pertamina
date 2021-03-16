@@ -65,7 +65,7 @@ namespace Pertamina.CORSEC._2019.ProfilCorsec
                         if (_item != null)
                         {
                             lblTab1.Text = tab;
-                            lblContent1.Text = _item.Contents;
+                            lblContent1.Text = string.Format("{0}", _item.Contents).Replace(@"<div style=""text-align: justify;"">", @"<div class=""justify"">");
                             lblSubtitle1.Text = _item.SubTitle;
                             lblTitle1.Text = _item.Title;
 
@@ -83,7 +83,7 @@ namespace Pertamina.CORSEC._2019.ProfilCorsec
                         if (_item != null)
                         {
                             lblTab2.Text = tab;
-                            lblContent2.Text = _item.Contents;
+                            lblContent2.Text = string.Format("{0}", _item.Contents).Replace(@"<div style=""text-align: justify;"">", @"<div class=""justify"">"); //_item.Contents;
                             lblSubtitle2.Text = _item.SubTitle;
                             lblTitle2.Text = _item.Title;
 

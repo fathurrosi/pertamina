@@ -1,4 +1,4 @@
-"use strict";
+//"use strict";
 
 // Class definition
 var KTDashboard = function() {
@@ -650,33 +650,33 @@ var KTDashboard = function() {
     // Revenue Change.
     // Based on Morris plugin - http://morrisjs.github.io/morris.js/
 
-    var revenueChange = function () {
-        if ($('#kt_chart_revenue_change_new_tab').length == 0) {
-            return;
-        }
+    //var revenueChange = function () {
+    //    if ($('#kt_chart_revenue_change_new_tab').length == 0) {
+    //        return;
+    //    }
 
-        Morris.Donut({
-            element: 'kt_chart_revenue_change_new_tab',
-            data: [{
-                    label: "Positif",
-                    value: 62
-                },
-                {
-                    label: "Negatif",
-                    value: 30
-                },
-                {
-                    label: "Netral",
-                    value: 28
-                }
-            ],
-            colors: [
-                KTApp.getStateColor('success'),
-                KTApp.getStateColor('danger'),
-                KTApp.getStateColor('brand')
-            ],
-        });
-    }
+    //    Morris.Donut({
+    //        element: 'kt_chart_revenue_change_new_tab',
+    //        data: [{
+    //                label: "Positif",
+    //                value: 30
+    //            },
+    //            {
+    //                label: "Negatif",
+    //                value: 30
+    //            },
+    //            {
+    //                label: "Netral",
+    //                value: 50
+    //            }
+    //        ],
+    //        colors: [
+    //            KTApp.getStateColor('success'),
+    //            KTApp.getStateColor('danger'),
+    //            KTApp.getStateColor('brand')
+    //        ],
+    //    });
+    //}
     var revenueChange = function () {
         if ($('#kt_chart_revenue_change').length == 0) {
             return;
@@ -686,7 +686,7 @@ var KTDashboard = function() {
             element: 'kt_chart_revenue_change',
             data: [{
                     label: "Positif",
-                    value: 62
+                    value: 30
                 },
                 {
                     label: "Negatif",
@@ -694,7 +694,7 @@ var KTDashboard = function() {
                 },
                 {
                     label: "Netral",
-                    value: 28
+                    value: 60
                 }
             ],
             colors: [
@@ -2114,35 +2114,37 @@ var KTDashboard = function() {
         init: function() {
             // init charts
             dailySales();
-            profitShare();
-            salesStats();
-            salesByApps();
-            latestUpdates();
-            trendsStats();
-            trendsStats2();
-            latestTrendsMap();
+            //profitShare();
+            //salesStats();
+            //salesByApps();
+            //latestUpdates();
+            //trendsStats();
+            //trendsStats2();
+            //latestTrendsMap();
+
             revenueChange();
-            supportCases();
-            supportRequests();
-            activitiesChart();
-            bandwidthChart1();
-            bandwidthChart2();
-            adWordsStat();
-            financeSummary();
-            quickStats();
-            orderStatistics();
 
-            // init daterangepicker
-            daterangepickerInit();
+            //supportCases();
+            //supportRequests();
+            //activitiesChart();
+            //bandwidthChart1();
+            //bandwidthChart2();
+            //adWordsStat();
+            //financeSummary();
+            //quickStats();
+            //orderStatistics();
 
-            // datatables
-            datatableLatestOrders();
+            //// init daterangepicker
+            //daterangepickerInit();
 
-            // calendar
-            calendarInit();
+            //// datatables
+            //datatableLatestOrders();
 
-            // earnings slide
-            earningsSlide();
+            //// calendar
+            //calendarInit();
+
+            //// earnings slide
+            //earningsSlide();
 
             
             // demo loading

@@ -52,11 +52,7 @@ namespace Pertamina.CORSEC._2019.Admin.CorporateCommunication.Details
             //{
             //    _tahun = DateTime.Now.Year;
             //}
-            if (string.IsNullOrEmpty(item.Name))
-            {
-                lblMessage.Text = GetValidationMessage("Sub Kategori harus diisi");
-                return;
-            }
+         
 
             item.created = item.created.HasValue ? item.created : DateTime.Now;
             item.Sequence = _seq;
@@ -64,7 +60,11 @@ namespace Pertamina.CORSEC._2019.Admin.CorporateCommunication.Details
             //item.Year = _tahun;
             item.updated = DateTime.Now;
             item.updated_by = username;
-
+            if (string.IsNullOrEmpty(item.Name))
+            {
+                lblMessage.Text = GetValidationMessage("Sub Kategori harus diisi");
+                return;
+            }
             tbl_CorporateCommunication_Sub_Category result = null;
             if (!isEdit)
             {

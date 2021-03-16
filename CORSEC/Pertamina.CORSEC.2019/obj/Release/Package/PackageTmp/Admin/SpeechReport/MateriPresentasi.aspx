@@ -87,7 +87,7 @@
         <SelectParameters>
             <asp:Parameter Name="StartRowIndex" Type="Int32" />
             <asp:Parameter Name="PageSize" Type="Int32" />
-            <asp:Parameter Name="data_type" Type="Int32" DefaultValue="1"  />
+            <asp:Parameter Name="data_type" Type="Int32" DefaultValue="4"  />
         </SelectParameters>
     </asp:ObjectDataSource>
 </asp:Content>

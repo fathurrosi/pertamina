@@ -203,6 +203,9 @@
     <Content Include="Admin\Mitra\Details\Item-Related.aspx" />
     <Content Include="Admin\Mitra\Details\Item.aspx" />
     <Content Include="Admin\Mitra\Items.aspx" />
+    <Content Include="Admin\MonitoringEvaluasi\details\media-monitoring.aspx" />
+    <Content Include="Admin\MonitoringEvaluasi\kinerja-sekper-monitoring.aspx" />
+    <Content Include="Admin\MonitoringEvaluasi\media-monitoring.aspx" />
     <Content Include="Admin\Organization\Anggota.aspx" />
     <Content Include="Admin\Organization\Details\Anggota.aspx" />
     <Content Include="Admin\Organization\Details\Jabatan.aspx" />
@@ -2071,6 +2074,8 @@
     <Content Include="Media\stock-photo.aspx" />
     <Content Include="Mitra\mitra-binaan-detail.aspx" />
     <Content Include="Mitra\mitra-binaan.aspx" />
+    <Content Include="MonitoringEvaluasi\kinerja-sekper-monitoring.aspx" />
+    <Content Include="MonitoringEvaluasi\media-monitoring.aspx" />
     <Content Include="Organisasi\str.aspx" />
     <Content Include="Organisasi\struktur.aspx" />
     <Content Include="ProfilCorsec\strategic-partner.aspx" />
@@ -2963,6 +2968,27 @@
     <Compile Include="Admin\Mitra\Items.aspx.designer.cs">
       <DependentUpon>Items.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\MonitoringEvaluasi\details\media-monitoring.aspx.cs">
+      <DependentUpon>media-monitoring.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MonitoringEvaluasi\details\media-monitoring.aspx.designer.cs">
+      <DependentUpon>media-monitoring.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MonitoringEvaluasi\kinerja-sekper-monitoring.aspx.cs">
+      <DependentUpon>kinerja-sekper-monitoring.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MonitoringEvaluasi\kinerja-sekper-monitoring.aspx.designer.cs">
+      <DependentUpon>kinerja-sekper-monitoring.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MonitoringEvaluasi\media-monitoring.aspx.cs">
+      <DependentUpon>media-monitoring.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MonitoringEvaluasi\media-monitoring.aspx.designer.cs">
+      <DependentUpon>media-monitoring.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Organization\Anggota.aspx.cs">
       <DependentUpon>Anggota.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3712,6 +3738,20 @@
     </Compile>
     <Compile Include="Mitra\mitra-binaan.aspx.designer.cs">
       <DependentUpon>mitra-binaan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MonitoringEvaluasi\kinerja-sekper-monitoring.aspx.cs">
+      <DependentUpon>kinerja-sekper-monitoring.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonitoringEvaluasi\kinerja-sekper-monitoring.aspx.designer.cs">
+      <DependentUpon>kinerja-sekper-monitoring.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MonitoringEvaluasi\media-monitoring.aspx.cs">
+      <DependentUpon>media-monitoring.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonitoringEvaluasi\media-monitoring.aspx.designer.cs">
+      <DependentUpon>media-monitoring.aspx</DependentUpon>
     </Compile>
     <Compile Include="Organisasi\str.aspx.cs">
       <DependentUpon>str.aspx</DependentUpon>

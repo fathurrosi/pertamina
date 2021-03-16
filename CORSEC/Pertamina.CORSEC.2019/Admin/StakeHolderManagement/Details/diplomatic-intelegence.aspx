@@ -1,10 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Backend.Master" AutoEventWireup="true" CodeBehind="diplomatic-intelegence.aspx.cs"
- Inherits="Pertamina.CORSEC._2019.Admin.StakeHolderManagement.Details.diplomatic_intelegence" EnableEventValidation="false" %>
+    Inherits="Pertamina.CORSEC._2019.Admin.StakeHolderManagement.Details.diplomatic_intelegence" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-
+ <div class="form-group">
+        <div class="col-sm-12" style="text-align: center">
+            <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+        </div>
+    </div>
+    <br />
     <div class="form-group">
         <label class="control-label col-sm-2">Judul</label>
         <div class="col-sm-6">
@@ -20,9 +25,9 @@
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-sm-2">Urutan</label>
+        <label class="control-label col-sm-2">Tahun</label>
         <div class="col-sm-2">
-            <asp:TextBox ID="txtTahun" runat="server" class="form-control"></asp:TextBox>
+            <asp:TextBox ID="txtTahun" runat="server" class="form-control year" MaxLength="4"></asp:TextBox>
         </div>
     </div>
 
@@ -70,4 +75,14 @@
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="script" runat="server">
+  <script>
+        $(function () {
+         
+            $(".year").datepicker({
+                format: "yyyy",
+                viewMode: "years",
+                minViewMode: "years"
+            });
+        });
+    </script>
 </asp:Content>

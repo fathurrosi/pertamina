@@ -13,7 +13,8 @@ namespace Pertamina.CORSEC._2019.Admin.Mitra
         {
             if (!IsPostBack)
             {
-                tbl_product_contact_person item = tbl_product_contact_personItem.GetAll().FirstOrDefault();
+                //tbl_product_contact_person item = tbl_product_contact_personItem.GetAll().FirstOrDefault();
+                tbl_product_contact_person item = tbl_product_contact_personItem.GetAll().OrderByDescending(T => T.id).FirstOrDefault();
                 if (item != null)
                 {
                     lblName.Text = item.name;
@@ -36,8 +37,8 @@ namespace Pertamina.CORSEC._2019.Admin.Mitra
 
                 string username = Utilities.Username;
                 bool newFile = false;
-                tbl_product_contact_person item = tbl_product_contact_personItem.GetByPK(ItemID);
-
+                //tbl_product_contact_person item = tbl_product_contact_personItem.GetByPK(ItemID);
+                tbl_product_contact_person item = tbl_product_contact_personItem.GetAll().OrderByDescending(T => T.id).FirstOrDefault();
                 if (item == null)
                 {
                     newFile = true;

@@ -78,6 +78,8 @@
     <Compile Include="Cstm\tbl_Media_FileItem.cs" />
     <Compile Include="Cstm\tbl_Media_VideoItem.cs" />
     <Compile Include="Cstm\tbl_menuItem.cs" />
+    <Compile Include="Cstm\tbl_MonitoringEvaluasi_KinerjaItem.cs" />
+    <Compile Include="Cstm\tbl_MonitoringEvaluasi_MediaItem.cs" />
     <Compile Include="Cstm\tbl_productItem.cs" />
     <Compile Include="Cstm\tbl_product_FileItem.cs" />
     <Compile Include="Cstm\tbl_product_relatedItem.cs" />
@@ -145,6 +147,8 @@
     <Compile Include="tbl_Media_fileItem.cs" />
     <Compile Include="tbl_Media_VideoItem.cs" />
     <Compile Include="tbl_menuItem.cs" />
+    <Compile Include="tbl_MonitoringEvaluasi_KinerjaItem.cs" />
+    <Compile Include="tbl_MonitoringEvaluasi_MediaItem.cs" />
     <Compile Include="tbl_privilegeItem.cs" />
     <Compile Include="tbl_productItem.cs" />
     <Compile Include="tbl_product_contact_personItem.cs" />

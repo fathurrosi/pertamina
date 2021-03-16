@@ -83,7 +83,8 @@ namespace Pertamina.CORSEC._2019.Mitra
 <a href=""#""><i class=""fa fa-phone-square""></i>{1}</a>
 ";
 
-                tbl_product_contact_person person = tbl_product_contact_personItem.GetAll().FirstOrDefault();
+                //tbl_product_contact_person person = tbl_product_contact_personItem.GetAll().FirstOrDefault();
+                tbl_product_contact_person person = tbl_product_contact_personItem.GetAll().OrderByDescending(t => t.id).FirstOrDefault();
                 lblContactPerson.Text = string.Format(tempalteContactPerson, person == null ? "None" : person.email, person == null ? "None" : person.phone);
                 #endregion
 

@@ -15,4 +15,23 @@ namespace Pertamina.CORSEC.Business.Enum
         Business_Analisys = 2
 
     }
+    public enum Monitoring_Type
+    {
+
+        [Description("Mingguan")]
+        Mingguan = 1,
+        [Description("Bulanan")]
+        Bulanan = 2,
+        [Description("Tahunan")]
+        Tahunan = 3
+    }
+
+    public enum Kinerja_Monitoring_Type
+    {
+        [Description("Kinerja Sekper")]
+        Kinerja_Sekper = 1,
+        [Description("Kinerja Unit/Fungsi")]
+        Kinerja_Unit = 2,
+
+    }
 }

@@ -1,6 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Frontend.Master" AutoEventWireup="true" CodeBehind="program-csr-bl.aspx.cs" Inherits="Pertamina.CORSEC._2019.CSRSMEPP.program_csr_bl" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+  <style>
+  .col-md-12 img {
+            border: 0px solid #fff;
+            border-radius: 4px;
+            padding: 10px;
+            width: 150px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
 

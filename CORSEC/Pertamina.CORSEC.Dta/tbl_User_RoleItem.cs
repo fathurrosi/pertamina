@@ -187,10 +187,10 @@ WHERE   [Username] = @Username";
             
             IDBHelper context = new DBHelper();
             context.CommandType = System.Data.CommandType.Text;
-            string sqlQuery = @"
+            string sqlQuery =@"
 WITH [Paging_tbl_User_Role] AS
 (
-    SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_User_Role].[ID] DESC) AS PAGING_ROW_NUMBER,
+    SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_User_Role].[ID]) AS PAGING_ROW_NUMBER,
             [tbl_User_Role].*
     FROM    [tbl_User_Role]
     WHERE   [Username] = @Username
@@ -231,10 +231,10 @@ WHERE   [RoleID] = @RoleID";
             
             IDBHelper context = new DBHelper();
             context.CommandType = System.Data.CommandType.Text;
-            string sqlQuery = @"
+            string sqlQuery =@"
 WITH [Paging_tbl_User_Role] AS
 (
-    SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_User_Role].[ID] DESC) AS PAGING_ROW_NUMBER,
+    SELECT  ROW_NUMBER() OVER (ORDER BY [tbl_User_Role].[ID]) AS PAGING_ROW_NUMBER,
             [tbl_User_Role].*
     FROM    [tbl_User_Role]
     WHERE   [RoleID] = @RoleID
@@ -243,7 +243,7 @@ WITH [Paging_tbl_User_Role] AS
 SELECT      [Paging_tbl_User_Role].*
 FROM        [Paging_tbl_User_Role]
 WHERE		PAGING_ROW_NUMBER BETWEEN @FirstRow AND @LastRow";
-            context.CommandText = sqlQuery;
+
             context.AddParameter("@RoleID", RoleID);
             return DBUtil.ExecuteMapper<tbl_User_Role>(context, new tbl_User_Role());
         }

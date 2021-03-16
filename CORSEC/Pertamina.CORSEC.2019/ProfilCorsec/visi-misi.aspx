@@ -1,6 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Frontend.Master" AutoEventWireup="true" CodeBehind="visi-misi.aspx.cs" Inherits="Pertamina.CORSEC._2019.ProfilCorsec.visi_misi" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .justify img {
+            border: 0px solid #fff;
+            border-radius: 4px;
+            padding: 10px;            
+        }
+
+        justify {
+        text-align: justify;
+        }
+        
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
 

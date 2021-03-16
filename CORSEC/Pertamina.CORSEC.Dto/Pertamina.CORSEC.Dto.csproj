@@ -57,6 +57,8 @@
     <Compile Include="Cstm\tbl_Guidelines_Doc.cs" />
     <Compile Include="Cstm\tbl_Kinerja_Sekper.cs" />
     <Compile Include="Cstm\tbl_Media.cs" />
+    <Compile Include="Cstm\tbl_MonitoringEvaluasi_Kinerja.cs" />
+    <Compile Include="Cstm\tbl_MonitoringEvaluasi_Media.cs" />
     <Compile Include="Cstm\tbl_product.cs" />
     <Compile Include="Cstm\tbl_product_related.cs" />
     <Compile Include="Cstm\tbl_Program.cs" />
@@ -116,6 +118,8 @@
     <Compile Include="tbl_Media_file.cs" />
     <Compile Include="tbl_Media_Video.cs" />
     <Compile Include="tbl_menu.cs" />
+    <Compile Include="tbl_MonitoringEvaluasi_Kinerja.cs" />
+    <Compile Include="tbl_MonitoringEvaluasi_Media.cs" />
     <Compile Include="tbl_privilege.cs" />
     <Compile Include="tbl_product.cs" />
     <Compile Include="tbl_product_contact_person.cs" />

@@ -83,6 +83,19 @@ namespace Pertamina.CORSEC._2019.Admin.StakeHolderManagement.Details
             item.updated = DateTime.Now;
             item.updated_by = username;
 
+
+
+            if (item.year < 1900)
+            {
+                lblMessage.Text = GetValidationMessage("Tahun tidak valid. Tahun harus lebih besar dari 1900");
+                return;
+            }
+            else if (string.IsNullOrEmpty(item.title))
+            {
+                lblMessage.Text = GetValidationMessage("Judul harus diisi");
+                return;
+            }
+
             byte[] fileBinary;
             if ((fileUpload.PostedFile != null) && (fileUpload.PostedFile.ContentLength > 0))
             {

@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Frontend.Master" AutoEventWireup="true" CodeBehind="strategic-partner.aspx.cs" Inherits="Pertamina.CORSEC._2019.ProfilCorsec.strategic_partner" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+  
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
 
