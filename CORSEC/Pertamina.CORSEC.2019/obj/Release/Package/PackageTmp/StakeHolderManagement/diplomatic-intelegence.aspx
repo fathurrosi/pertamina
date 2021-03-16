@@ -75,106 +75,15 @@
                         <div class="kt-portlet__head-toolbar">
                             <div class="btn-group ml-1" role="group" aria-label="Button group with nested dropdown">
                                 <div class="btn-group" role="group">
-                                     <asp:Literal ID="litCountry" runat="server"></asp:Literal>
-                                   <%-- <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Country
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                                        <a class="dropdown-item" href="#">Indonesia</a>
-                                        <a class="dropdown-item" href="#">Singapore</a>
-                                        <a class="dropdown-item" href="#">Malaysia</a>
-                                        <a class="dropdown-item" href="#">Thailand</a>
-                                    </div>
-                                    --%>
+                                    <asp:Literal ID="litCountry" runat="server"></asp:Literal>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="kt-portlet__body">
                         <div class="tab-content">
-                            <%--  <div class="tab-pane active" id="kt_portlet_base_demo_2_4_tab_content" role="tabpanel">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-hover">
-                                        <thead>
-                                            <tr class="text-center">
-                                                <th width="4%">No</th>
-                                                <th width="15%">Loream Ipsum</th>
-                                                <th width="10%">Tahun</th>
-                                                <th>Judul</th>
-                                                <th width="5%"></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th class="text-center" scope="row">1</th>
-                                                <td>Loream Ipsum</td>
-                                                <td class="text-center">2020</td>
-                                                <td>
-                                                    <span class="kt-media kt-media--xs">
-                                                        <img src="assets/media/files/pdf.svg" class="float-left mr-2" alt=" image">
-                                                        <a href="#" class="mt-1">Loream Ipsum Loream Ipsum Loream Ipsum
-                                                        </a>
-                                                    </span>
-                                                </td>
-                                                <td><a href="#" class="btn-label-brand btn btn-sm btn-bold">Lihat</a></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="text-center" scope="row">2</th>
-                                                <td>Loream Ipsum</td>
-                                                <td class="text-center">2019</td>
-                                                <td>
-                                                    <span class="kt-media kt-media--xs">
-                                                        <img src="assets/media/files/pdf.svg" class="float-left mr-2" alt=" image">
-                                                        <a href="#" class="mt-1">Loream Ipsum Loream Ipsum Loream Ipsum
-                                                        </a>
-                                                    </span>
-                                                </td>
-                                                <td><a href="#" class="btn-label-brand btn btn-sm btn-bold">Lihat</a></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="text-center" scope="row">3</th>
-                                                <td>Loream Ipsum</td>
-                                                <td class="text-center">2018</td>
-                                                <td>
-                                                    <span class="kt-media kt-media--xs">
-                                                        <img src="assets/media/files/doc.svg" class="float-left mr-2" alt=" image">
-                                                        <a href="#" class="mt-1">Loream Ipsum Loream Ipsum Loream Ipsum
-                                                        </a>
-                                                    </span>
-                                                </td>
-                                                <td><a href="#" class="btn-label-brand btn btn-sm btn-bold">Lihat</a></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="text-center" scope="row">4</th>
-                                                <td>Loream Ipsum</td>
-                                                <td class="text-center">2018</td>
-                                                <td>
-                                                    <span class="kt-media kt-media--xs">
-                                                        <img src="assets/media/files/doc.svg" class="float-left mr-2" alt=" image">
-                                                        <a href="#" class="mt-1">Loream Ipsum Loream Ipsum Loream Ipsum
-                                                        </a>
-                                                    </span>
-                                                </td>
-                                                <td><a href="#" class="btn-label-brand btn btn-sm btn-bold">Lihat</a></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="text-center" scope="row">5</th>
-                                                <td>Loream Ipsum</td>
-                                                <td class="text-center">2018</td>
-                                                <td>
-                                                    <span class="kt-media kt-media--xs">
-                                                        <img src="assets/media/files/doc.svg" class="float-left mr-2" alt=" image">
-                                                        <a href="#" class="mt-1">Loream Ipsum Loream Ipsum Loream Ipsum
-                                                        </a>
-                                                    </span>
-                                                </td>
-                                                <td><a href="#" class="btn-label-brand btn btn-sm btn-bold">Lihat</a></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>--%>
+
 
                             <asp:GridView ID="grid" runat="server" class="table table-bordered table-hover"
                                 AutoGenerateColumns="false"
@@ -244,57 +153,7 @@
                             </div>
                         </div>
 
-                        <%--                        <div class="kt-pagination kt-pagination--sm kt-pagination--primary kt-mt-40">
-                            <ul class="kt-pagination__links">
-                                <li class="kt-pagination__link--first">
-                                    <a href="#"><i class="fa fa-angle-double-left kt-font-primary"></i></a>
-                                </li>
-                                <li class="kt-pagination__link--next">
-                                    <a href="#"><i class="fa fa-angle-left kt-font-primary"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#">...</a>
-                                </li>
-                                <li>
-                                    <a href="#">29</a>
-                                </li>
-                                <li class="kt-pagination__link--active">
-                                    <a href="#">30</a>
-                                </li>
-                                <li>
-                                    <a href="#">31</a>
-                                </li>
-                                <li>
-                                    <a href="#">32</a>
-                                </li>
-                                <li>
-                                    <a href="#">33</a>
-                                </li>
-                                <li>
-                                    <a href="#">34</a>
-                                </li>
-                                <li>
-                                    <a href="#">...</a>
-                                </li>
-                                <li class="kt-pagination__link--prev">
-                                    <a href="#"><i class="fa fa-angle-right kt-font-primary"></i></a>
-                                </li>
-                                <li class="kt-pagination__link--last">
-                                    <a href="#"><i class="fa fa-angle-double-right kt-font-primary"></i></a>
-                                </li>
-                            </ul>
-                            <div class="kt-pagination__toolbar">
-                                <select class="form-control kt-font-primary" style="width: 60px;">
-                                    <option value="10">10</option>
-                                    <option value="20">20</option>
-                                    <option value="30">30</option>
-                                    <option value="50">50</option>
-                                    <option value="100">100</option>
-                                </select>
-                                <span class="pagination__desc">Displaying 10 of 230 records
-                                </span>
-                            </div>
-                        </div>--%>
+
                     </div>
                 </div>
             </div>

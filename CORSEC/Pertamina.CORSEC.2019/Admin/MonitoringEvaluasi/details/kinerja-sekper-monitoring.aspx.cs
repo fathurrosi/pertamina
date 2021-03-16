@@ -17,9 +17,10 @@ namespace Pertamina.CORSEC._2019.Admin.MonitoringEvaluasi.details
                 if (item != null)
                 {
                     lblTitle.Text = item.Title;
-                     ddlKineja.SelectedValue = item.Monitoring_Type;
+                    ddlKineja.SelectedValue = item.Monitoring_Type;
                     //item.Bulan = 5;
                     //item.Tahun = 20210;
+                    txtMonth.Text = string.Format("{0}-{1:00}", item.Tahun, item.Bulan);
                     ddlPeriode.SelectedValue = item.Priode;
                 }
             }
@@ -43,29 +44,34 @@ namespace Pertamina.CORSEC._2019.Admin.MonitoringEvaluasi.details
                 item.updated_by = username;
             }
 
-       
+
             if (string.IsNullOrEmpty(ddlKineja.SelectedValue))
             {
                 lblMessage.Text = GetValidationMessage("Tipe Kinerja harus diisi!");
                 return;
             }
-            
+
             if (string.Format("{0}", lblTitle.Text).Length <= 0)
             {
                 lblMessage.Text = GetValidationMessage("Laporan harus diisi!");
                 return;
             }
-            
+
             if (string.IsNullOrEmpty(ddlPeriode.SelectedValue))
             {
                 lblMessage.Text = GetValidationMessage("Periode harus diisi!");
                 return;
             }
-                        
+
+            int bulan = 0;
+            int tahun = 0;
+            string[] month = txtMonth.Text.Split('-');
+            int.TryParse(month[0], out tahun);
+            int.TryParse(month[1], out bulan);
 
             item.Monitoring_Type = ddlKineja.SelectedValue;
-            item.Bulan = 5;
-            item.Tahun = 20210;
+            item.Bulan = bulan;
+            item.Tahun = tahun;
             item.Title = lblTitle.Text;
             item.Priode = ddlPeriode.SelectedValue;
 

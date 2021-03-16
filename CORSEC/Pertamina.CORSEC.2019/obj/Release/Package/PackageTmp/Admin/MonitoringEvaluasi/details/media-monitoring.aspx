@@ -72,37 +72,6 @@
     </div>
 
 
-
-    <div class="form-group">
-        <div class="col-sm-12" style="text-align: center">
-            <div class="row">
-                <asp:ListView ID="listViewMitra_binaan" runat="server">
-                    <EmptyDataTemplate>
-                        <div class="form-group">
-                            <asp:Image ID="imgThumnail" ImageUrl="~/Content/assets/media/users/default.jpg" runat="server" CssClass="imgThumnail img-fluid img-thumbnail img-thumbnail-no-borders rounded-0" alt="image thumnail" />
-                        </div>
-                    </EmptyDataTemplate>
-                    <EmptyItemTemplate>
-                        <td runat="server" />
-                    </EmptyItemTemplate>
-                    <ItemTemplate>
-                        <div class="col-md-4">
-                            <!--begin:: Widgets/Blog-->
-                            <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
-                                <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
-                                    <a title="klik untuk edit atau hapus." href='<%# ResolveUrl(string.Format("~/Admin/Mitra/Details/Item-Add.aspx{0}&pid={1}&id={2}", PrevUrl, Eval("product_id"), Eval("id"))) %>' class="kt-widget19__username">
-                                        <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 280px; min-width: 200px; background-image: url('<%# ConvertUrl(Eval("file_blob"))%>')" title="klik untuk edit atau hapus.">
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--end:: Widgets/Blog-->
-                        </div>
-                    </ItemTemplate>
-                </asp:ListView>
-            </div>
-        </div>
-    </div>
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
             <asp:Button ID="btnSave" runat="server" Text="Simpan" OnClick="btnSave_Click" />

@@ -40,6 +40,15 @@ namespace Pertamina.CORSEC._2019.Admin.MonitoringEvaluasi.details {
         protected global::System.Web.UI.WebControls.TextBox lblTitle;
         
         /// <summary>
+        /// txtMonth control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMonth;
+        
+        /// <summary>
         /// ddlPeriode control.
         /// </summary>
         /// <remarks>

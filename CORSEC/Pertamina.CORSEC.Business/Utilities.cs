@@ -424,7 +424,7 @@ namespace Pertamina.CORSEC.Business
             if (month <= 0 || month > 12) return "";
             string[] months = new string[] { "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember" };
 
-            return months[month];
+            return months[month - 1];
         }
 
         public static List<MonthHelper> GetAllMonth()
