@@ -1,0 +1,81 @@
+﻿using System;
+using System.Web.UI.WebControls;
+using Pertamina.CORSEC.Business;
+using Pertamina.CORSEC.Business.Enum;
+using Pertamina.CORSEC.Dta;
+using Pertamina.CORSEC.Dto;
+
+namespace Pertamina.CORSEC._2019.Admin.MonitoringEvaluasi.details
+{
+    public partial class kinerja_sekper_monitoring : AuthorizeAdminPage
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                tbl_MonitoringEvaluasi_Kinerja item = tbl_MonitoringEvaluasi_KinerjaItem.GetByPK(ItemID);
+                if (item != null)
+                {
+                    lblTitle.Text = item.Title;
+                     ddlKineja.SelectedValue = item.Monitoring_Type;
+                    //item.Bulan = 5;
+                    //item.Tahun = 20210;
+                    ddlPeriode.SelectedValue = item.Priode;
+                }
+            }
+        }
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            string username = Utilities.Username;
+            tbl_MonitoringEvaluasi_Kinerja item = tbl_MonitoringEvaluasi_KinerjaItem.GetByPK(ItemID);
+            bool newFile = false;
+            if (item == null)
+            {
+                newFile = true;
+                item = new tbl_MonitoringEvaluasi_Kinerja();
+                item.created = DateTime.Now;
+                item.created_by = username;
+            }
+            else
+            {
+                item.updated = DateTime.Now;
+                item.updated_by = username;
+            }
+
+       
+            if (string.IsNullOrEmpty(ddlKineja.SelectedValue))
+            {
+                lblMessage.Text = GetValidationMessage("Tipe Kinerja harus diisi!");
+                return;
+            }
+            
+            if (string.Format("{0}", lblTitle.Text).Length <= 0)
+            {
+                lblMessage.Text = GetValidationMessage("Laporan harus diisi!");
+                return;
+            }
+            
+            if (string.IsNullOrEmpty(ddlPeriode.SelectedValue))
+            {
+                lblMessage.Text = GetValidationMessage("Periode harus diisi!");
+                return;
+            }
+                        
+
+            item.Monitoring_Type = ddlKineja.SelectedValue;
+            item.Bulan = 5;
+            item.Tahun = 20210;
+            item.Title = lblTitle.Text;
+            item.Priode = ddlPeriode.SelectedValue;
+
+
+            if (!newFile) { tbl_MonitoringEvaluasi_KinerjaItem.Update(item); }
+            else { tbl_MonitoringEvaluasi_KinerjaItem.Insert(item); }
+
+            Response.Redirect(ResolveUrl(string.Format("~/Admin/MonitoringEvaluasi/kinerja-sekper-monitoring.aspx{0}", PrevUrl)));
+
+        }
+
+    }
+}

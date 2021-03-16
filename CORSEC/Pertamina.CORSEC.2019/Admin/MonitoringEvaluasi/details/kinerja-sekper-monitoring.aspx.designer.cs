@@ -10,7 +10,7 @@
 namespace Pertamina.CORSEC._2019.Admin.MonitoringEvaluasi.details {
     
     
-    public partial class media_monitoring {
+    public partial class kinerja_sekper_monitoring {
         
         /// <summary>
         /// lblMessage control.
@@ -22,6 +22,15 @@ namespace Pertamina.CORSEC._2019.Admin.MonitoringEvaluasi.details {
         protected global::System.Web.UI.WebControls.Label lblMessage;
         
         /// <summary>
+        /// ddlKineja control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlKineja;
+        
+        /// <summary>
         /// lblTitle control.
         /// </summary>
         /// <remarks>
@@ -31,40 +40,13 @@ namespace Pertamina.CORSEC._2019.Admin.MonitoringEvaluasi.details {
         protected global::System.Web.UI.WebControls.TextBox lblTitle;
         
         /// <summary>
-        /// lblTotalArticle control.
+        /// ddlPeriode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lblTotalArticle;
-        
-        /// <summary>
-        /// ddlMonitoring_Type control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMonitoring_Type;
-        
-        /// <summary>
-        /// ddlMedia_Type control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlMedia_Type;
-        
-        /// <summary>
-        /// ddlTone control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTone;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPeriode;
         
         /// <summary>
         /// btnSave control.

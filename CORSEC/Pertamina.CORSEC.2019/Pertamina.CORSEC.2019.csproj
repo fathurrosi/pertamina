@@ -203,6 +203,7 @@
     <Content Include="Admin\Mitra\Details\Item-Related.aspx" />
     <Content Include="Admin\Mitra\Details\Item.aspx" />
     <Content Include="Admin\Mitra\Items.aspx" />
+    <Content Include="Admin\MonitoringEvaluasi\details\kinerja-sekper-monitoring.aspx" />
     <Content Include="Admin\MonitoringEvaluasi\details\media-monitoring.aspx" />
     <Content Include="Admin\MonitoringEvaluasi\kinerja-sekper-monitoring.aspx" />
     <Content Include="Admin\MonitoringEvaluasi\media-monitoring.aspx" />
@@ -2967,6 +2968,13 @@
     </Compile>
     <Compile Include="Admin\Mitra\Items.aspx.designer.cs">
       <DependentUpon>Items.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MonitoringEvaluasi\details\kinerja-sekper-monitoring.aspx.cs">
+      <DependentUpon>kinerja-sekper-monitoring.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MonitoringEvaluasi\details\kinerja-sekper-monitoring.aspx.designer.cs">
+      <DependentUpon>kinerja-sekper-monitoring.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\MonitoringEvaluasi\details\media-monitoring.aspx.cs">
       <DependentUpon>media-monitoring.aspx</DependentUpon>
