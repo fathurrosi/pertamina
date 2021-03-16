@@ -32,7 +32,7 @@
     </div>
 
 
-    <%--    <div class="form-group">
+    <%--<div class="form-group">
         <label class="control-label col-sm-2">Negara</label>
         <div class="col-sm-6">
             <asp:DropDownList ID="ddlcountry" runat="server" class="form-control"></asp:DropDownList>

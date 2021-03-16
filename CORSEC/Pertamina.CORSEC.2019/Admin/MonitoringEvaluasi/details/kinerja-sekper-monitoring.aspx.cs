@@ -57,17 +57,37 @@ namespace Pertamina.CORSEC._2019.Admin.MonitoringEvaluasi.details
                 return;
             }
 
+
+            if (string.Format("{0}", txtMonth.Text).Length <= 0)
+            {
+                lblMessage.Text = GetValidationMessage("Bulan harus diisi!");
+                return;
+            }
+
+            DateTime _bulan;
+            if (!DateTime.TryParse(txtMonth.Text, out _bulan))
+            {
+                lblMessage.Text = GetValidationMessage("isi Bulan dengan data yang valid!");
+                return;
+            }
+            else if (_bulan.Year <= 1900)
+            {
+                lblMessage.Text = GetValidationMessage("isi Bulan dengan data yang valid!");
+                return;
+            }
+
+
             if (string.IsNullOrEmpty(ddlPeriode.SelectedValue))
             {
                 lblMessage.Text = GetValidationMessage("Periode harus diisi!");
                 return;
             }
 
-            int bulan = 0;
-            int tahun = 0;
-            string[] month = txtMonth.Text.Split('-');
-            int.TryParse(month[0], out tahun);
-            int.TryParse(month[1], out bulan);
+            int bulan = _bulan.Month;
+            int tahun = _bulan.Year;
+            //string[] month = txtMonth.Text.Split('-');
+            //int.TryParse(month[0], out tahun);
+            //int.TryParse(month[1], out bulan);
 
             item.Monitoring_Type = ddlKineja.SelectedValue;
             item.Bulan = bulan;
