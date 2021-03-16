@@ -152,16 +152,20 @@ namespace Pertamina.CORSEC._2019.MonitoringEvaluasi
             int.TryParse(ddlPageSize.SelectedValue, out pageSize);
             int.TryParse(hdnPage.Value, out pageIndex);
 
-            DateTime filter = DateTime.Now;
-            DateTime.TryParse(txtMonth.Text, out filter);
 
+            int bulan = 0;
+            int tahun = 0;
 
-            int bulan = filter.Month;
-            int tahun = filter.Year;
+            //DateTime filter = DateTime.Now;
+            //if (DateTime.TryParse(txtMonth.Text, out filter))
+            //{
+            //    bulan = filter.Month;
+            //    tahun = filter.Year;
+            //}
+            
             int tab = ActiveTab;
             totalRows = tbl_MonitoringEvaluasi_KinerjaItem.GetTotalRecord(tab, tahun, bulan);
-
-
+            
             grid.PageSize = pageSize;
             grid.DataSource = tbl_MonitoringEvaluasi_KinerjaItem.GetPaging(pageSize, pageIndex, tab, tahun, bulan);
             grid.DataBind();
@@ -179,8 +183,9 @@ namespace Pertamina.CORSEC._2019.MonitoringEvaluasi
         {
             if (!IsPostBack)
             {
-                if (string.IsNullOrEmpty(txtMonth.Text))
-                    txtMonth.Text = string.Format("{0:dd MMMM yyyy}", DateTime.Now);
+                //DateTime.Now.ToString("yyyy-MM-dd");
+                //if (string.IsNullOrEmpty(txtMonth.Text))
+                //    txtMonth.Text = string.Format("{0:yyyy-MM-dd}", DateTime.Now);
 
                 #region Template Baru
                 string header_template = @"

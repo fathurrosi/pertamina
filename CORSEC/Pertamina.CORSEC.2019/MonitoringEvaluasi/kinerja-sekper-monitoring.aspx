@@ -48,7 +48,7 @@
                                         aria-selected="true">Kinerja Unit/Fungsi
                                     </a>
                                 </li>--%>
-                                  <asp:Literal ID="litTab" runat="server"></asp:Literal>
+                                <asp:Literal ID="litTab" runat="server"></asp:Literal>
                             </ul>
                         </div>
                     </div>
@@ -56,23 +56,22 @@
                         <div class="tab-content">
 
                             <div class="tab-pane active" id="kt_portlet_base_demo_2_4_tab_content" role="tabpanel">
-                                <div class="pull-right mb-3">
+
+                                <%--<div class="pull-right mb-3">
                                     <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                                        <div class="btn-group" role="group">
-                                            <%--<input class="form-control" type="month" value="2011-08" id="example-month-input">--%>
+                                        <div class="btn-group" role="group">                                            
                                             <asp:TextBox ID="txtMonth" runat="server" TextMode="Month" class="form-control"></asp:TextBox>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="table-responsive">
+                                </div>--%>
 
+                                <div class="table-responsive">
                                     <asp:GridView ID="grid" runat="server" class="table table-bordered table-hover"
                                         AutoGenerateColumns="false"
                                         AllowPaging="true"
                                         AllowSorting="false"
                                         OnRowDataBound="grid_RowDataBound" ShowHeader="true" GridLines="None">
                                         <Columns>
-
                                             <asp:TemplateField HeaderText="No" ItemStyle-Width="4%">
                                                 <ItemTemplate>
                                                     <%# Eval("PAGING_ROW_NUMBER")%>
@@ -85,22 +84,20 @@
                                             </asp:TemplateField>
                                             <asp:TemplateField HeaderText="Bulan" ItemStyle-Width="10%">
                                                 <ItemTemplate>
-                                                    <%# Eval("Bulan")%>
+                                                    <%# string.Format("{0} {1}", Pertamina.CORSEC.Business.Utilities.ToMonth((int) Eval("Bulan")), Eval("Tahun"))  %>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-
-
                                             <asp:TemplateField HeaderText="Periode Laporan" ItemStyle-Width="10%">
                                                 <ItemTemplate>
-                                                    <%# Eval("Bulan")%>
+                                                    <%# Eval("Priode")%>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
 
-                                            <asp:TemplateField HeaderText="Action" ItemStyle-Width="5%">
+                                         <%--   <asp:TemplateField HeaderText="Action" ItemStyle-Width="5%">
                                                 <ItemTemplate>
                                                     <a href="#" class="btn-label-brand btn btn-sm btn-bold">Lihat</a>
                                                 </ItemTemplate>
-                                            </asp:TemplateField>
+                                            </asp:TemplateField>--%>
                                         </Columns>
                                         <EmptyDataTemplate>
                                             There are currently no items in this table.

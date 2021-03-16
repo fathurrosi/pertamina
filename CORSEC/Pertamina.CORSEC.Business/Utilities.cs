@@ -115,7 +115,7 @@ namespace Pertamina.CORSEC.Business
 
             //return list;
 
-            return tbl_MenuItem.GetByType("FRONT"); 
+            return tbl_MenuItem.GetByType("FRONT");
         }
 
         public static List<tbl_Menu> GetBACKEND_MENU()
@@ -419,6 +419,14 @@ namespace Pertamina.CORSEC.Business
             }
         }
 
+        public static string ToMonth(int month)
+        {
+            if (month <= 0 || month > 12) return "";
+            string[] months = new string[] { "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember" };
+
+            return months[month];
+        }
+
         public static List<MonthHelper> GetAllMonth()
         {
             string[] months = new string[] { "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember" };
@@ -622,7 +630,7 @@ namespace Pertamina.CORSEC.Business
             if (text == null) text = string.Empty;
             text = StripHTML(text);
             if (text.Length > length)
-            {             
+            {
                 text = text.Substring(0, length);
             }
             return text.Trim();

@@ -49,15 +49,6 @@ namespace Pertamina.CORSEC._2019.MonitoringEvaluasi {
         protected global::System.Web.UI.WebControls.Literal litTab;
         
         /// <summary>
-        /// txtMonth control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMonth;
-        
-        /// <summary>
         /// grid control.
         /// </summary>
         /// <remarks>

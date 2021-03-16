@@ -74,7 +74,7 @@ namespace Pertamina.CORSEC._2019.MonitoringEvaluasi
     <h4 class=""kt-widget14__title"">Total Artikel
     </h4>
     <div class=""kt-widget14__legend"">
-        <span class=""kt-widget14__stats""><i class=""fa fa-globe-asia""></i> d{0} Artikel</span>
+        <span class=""kt-widget14__stats""><i class=""fa fa-globe-asia""></i> {0} Artikel</span>
     </div>
     <div class=""kt-widget14__legend"">
         <span class=""kt-widget14__stats""><i class=""fa fa-tv""></i> {1} Artikel</span>
